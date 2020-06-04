@@ -1,0 +1,111 @@
+/* pseudoClassButton */
+*{
+  margin: 0;
+  padding: 0;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+}
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.button-wrapper {
+  width: 120px;
+  height: 50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  color: #f27059;
+  cursor: pointer;
+  user-select: none;
+}
+.button-content {
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: 0.4s all ease;
+}
+.one:before,
+.one:after {
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  background-color: #f27059;
+  transition: 0.4s all ease;
+  content: "";
+}
+.one:before {
+  top: 0;
+}
+.one:after {
+  bottom: 0;
+}
+.one .button-content:before,
+.one .button-content:after {
+  height: 100%;
+  width: 2px;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  background-color: #f27059;
+  transition: 0.4s all ease;
+  content: "";
+}
+.one .button-content:before {
+  left: 0;
+}
+.one .button-content:after {
+  right: 0;
+}
+.one:hover:before,
+.one:hover:after {
+  transition: 0.4s all ease;
+}
+.one:hover:before {
+  transform: translateY(-10px);
+}
+.one:hover:after {
+  transform: translateY(10px);
+}
+.one:hover,
+.two:hover {
+  color: white;
+}
+.one:hover .button-content:before,
+.one:hover .button-content:after {
+  width: 100%;
+  transition: 0.4s all ease;
+}
+.two {
+  position: relative;
+  box-sizing: border-box;
+  border: 2px solid #f27059;
+}
+.two:before {
+  width: 0;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  background-color: #f27059;
+  transition: 0.4s all ease;
+  content: "";
+}
+.two:hover:before {
+  width: 100%;
+  transition: 0.4s all ease;
+}
+.one:active,
+.two:active {
+  color: black;
+}

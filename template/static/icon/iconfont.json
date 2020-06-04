@@ -1,0 +1,44 @@
+{
+  "id": "1812938",
+  "name": "我的shou'c",
+  "font_family": "iwowenf",
+  "css_prefix_text": "iwo-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "593487",
+      "name": "菜单",
+      "font_class": "weibiaoti15",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "593504",
+      "name": "未标题-32",
+      "font_class": "weibiaoti32",
+      "unicode": "e632",
+      "unicode_decimal": 58930
+    },
+    {
+      "icon_id": "593505",
+      "name": "上",
+      "font_class": "weibiaoti33",
+      "unicode": "e633",
+      "unicode_decimal": 58931
+    },
+    {
+      "icon_id": "593506",
+      "name": "右",
+      "font_class": "weibiaoti34",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "593507",
+      "name": "下",
+      "font_class": "weibiaoti35",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+.theme1 {
+  @backgroundColor: #1d1e23;
+  @navItemDefaultColor: hsla(0,0%,100%,.7);
+  @navItemActiveColor: #fff;
+  @navItemActiveBackGround: rgba(179,212,252, 0.3);
+  @navItemHoverBackGround: #1d1e23;
+  @titleBackground: -webkit-linear-gradient(left top,#f6ca9d,#eb9743,#000);
+}
+.ellipsis{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.theme1();
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html,body,.app{
+  width: 100%;
+  height: 100%;
+  font-family: Roboto,sans-serif;
+  display: flex;
+}
+
+.app > .left{
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  // border-right: thin solid rgba(0,0,0,.12);
+  background-color: @backgroundColor;
+  #menu{
+    flex: 1;
+    overflow-y: overlay;
+  }
+  .title{
+    text-align: center;
+    line-height: 60px;
+    // color: #f6ca9d;
+    background-image: @titleBackground;
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
+  }
+  .search{
+    padding: 10px;
+    position: relative;
+    .input-group-addon{
+      cursor: pointer;
+    }
+    // #search-content{
+    //   position: absolute;
+    //   height: 300px;
+    //   background-color: rgba(255,255,255,0.8);
+    //   border-radius: 3px;
+    //   left: 10px;
+    //   right: 10px;
+    //   margin-top: 10px;
+    // }
+  }
+  .list-block{
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 10px;
+    padding: 0 10px;
+    border-radius: 5px;
+    margin-bottom: 1px;
+    cursor: pointer;
+    text-decoration: none;
+    color: @navItemDefaultColor;
+    &:hover{
+      background-color: @navItemHoverBackGround;
+    }
+  }
+  .list-header {
+    font-weight: 600;
+    & > span:nth-child(1){
+      transition: all 0.1s;
+      display: inline-block;
+      .ellipsis()
+    }
+    & > span:nth-child(2){
+      margin-left: auto;
+      transition: all 0.1s;
+    }
+    &:hover{
+      color: @navItemActiveColor;
+    }
+  }
+  .list-content{
+    display: none;
+    a {
+      .ellipsis();
+      display: block;
+      padding-left: 20px;
+      user-select:none;
+      transition: all 0.1s;
+      &:hover{
+        padding-left: 25px;
+        color: @navItemActiveColor;
+      }
+    }
+  }
+  .list-header-active, .list-item-active {
+    color: @navItemActiveColor;
+  }
+  .list-item-active {
+    background-color: @navItemActiveBackGround;
+    font-weight: 500;
+    &:hover{
+      font-weight: 500;
+      background-color: @navItemActiveBackGround;
+    }
+  }
+}
+.app > .right{
+  flex: 1;
+  #iframe-box{
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DEMOBAR</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!--网页标题左侧显示-->
+  <link rel="icon" href="<%= publicPath %>favicon.png" type="image/png">
+  <!--收藏夹显示图标-->
+  <link rel="shortcut icon" href="<%= publicPath %>favicon.png" type="image/x-icon">
+</head>
+
+<body>
+  <div class="app">
+    <div class="left">
+      <header>
+        <h1 class="title">DEMOBAR</h1>
+      </header>
+      <!-- <div class="search">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="搜索" aria-describedby="basic-addon1">
+          <span class="input-group-addon" id="basic-addon1">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+          </span>
+        </div>
+        <div id="search-content"></div>
+      </div> -->
+      <nav id="menu">
+        <div class="list-group">
+          <% for (var name in pagesConfig) { %>
+            <div class="list-group-wrap">
+              <div class="list-header list-block <%= pagesConfig[name].name %>">
+                <span><%= name %></span>
+                <span class="iwowenf iwo-weibiaoti35" aria-hidden="true"></span>
+              </div>
+              <div class="list-content">
+                <% for (var page of pagesConfig[name].pages) { %>
+                <a href="<%= publicPath %><%= page.name %>" data-path="<%= page.path %>" class="list-item list-block <%= page.name %>"><%= page.title %></a>
+                <% } %>
+              </div>
+            </div>
+          <% } %>
+        </div>
+      </nav>
+    </div>
+    <main class="right">
+      <iframe id="iframe-box" src="" frameborder="0"></iframe>
+    </main>
+  </div>
+  <script>
+    var pagesConfig = JSON.parse('<%= JSON.stringify(pagesConfig) %>')
+    var publicPath = '<%= publicPath %>'
+  </script>
+  <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+  <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+  <script src="http://xiaowiba.com/live2d_models/L2Dwidget.min.js"></script>
+  <!-- 看板喵 -->
+  <script src="<%= publicPath %>live2DModel/l2dwidget.min.js"></script>
+  <script>
+    var tororo = '<%= publicPath %>live2DModel/tororo/assets/tororo.model.json';
+    var hijiki = '<%= publicPath %>live2DModel/hijiki/assets/hijiki.model.json';
+  </script>
+</body>
+
+</html>
