@@ -2,6 +2,10 @@
   "name": "demobar",
   "version": "1.0.0",
   "license": "MIT",
+  "scripts": {
+    "serve": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.dev.config.js",
+    "build": "cross-env NODE_ENV=production webpack --config build/webpack.prod.config.js"
+  },
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/plugin-transform-runtime": "^7.9.0",
@@ -34,10 +38,6 @@
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3",
     "webpack-merge": "^4.2.2"
-  },
-  "scripts": {
-    "serve": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.dev.config.js",
-    "build": "cross-env NODE_ENV=production webpack --config build/webpack.prod.config.js"
   },
   "dependencies": {
     "nprogress": "^0.2.0",
