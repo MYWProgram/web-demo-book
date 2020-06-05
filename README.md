@@ -48,4 +48,4 @@
 - underscore-template-loader 处理ejs文件中的引入
 - webpack-bundle-analyzer 可以看到项目各模块的大小，可以按需优化
 - open-browser-webpack-plugin 自动打开浏览器
-- mini-css-extract-plugin 分离css
+- mini-css-extract-plugin 分离 css
