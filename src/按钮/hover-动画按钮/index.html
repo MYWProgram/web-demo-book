@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hover 动画按钮</title>
+  </head>
+  <!--
+    * 前两个用 div 实现的按钮，主要是注意使用伪类添加了哪些部分，以及鼠标移入之后以及点下去和抬起的时间改变了哪些伪类。
+    * 1. 第一个按钮中上下的两个横线分别在 .one 这个类上添加 before 和 after ，在 hover 之后修改 translateY 属性值进行上下偏移；
+    *    左右的背景填充在 .item 类上使用 before 和 after 进行添加，因为是背景色，这里需要设置 z-index ，也就是未 hover 时是看不见的；hover 之后将宽度设为 100% 就出来了。
+    * 2. 第二个按钮比第一个稍简单一点，只是设置一个 before 的伪类来演示这个从左至右的背景填充动画就行了。
+    *
+    * 需要注意的是区分 transform 和 transition 两个属性的作用：
+    * 前者是定义了一系列应用于元素和元素子元素的变换规则集合，后者是一个元素在不同状态之间切换的时候定义不同的过渡效果。
+    * 前者只需要定义这个改变的过程，也就是将动画过程写出来，就会执行；后者是需要其他的 CSS 属性来控制动画变化效果（比如上面 hover 之后 width: 100%;）。
+    *
+    * 最后一个使用 background-image 来描绘四个方向的边框线，并配合 transition 来添加动画。
+  -->
+  <body>
+    <div class="box one">
+      <div class="item">Chong</div>
+    </div>
+    <div class="box two">
+      <div class="item">Chong</div>
+    </div>
+    <div class="dynamic-border">Chong</div>
+  </body>
+</html>

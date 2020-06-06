@@ -1,0 +1,42 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.star-rating input {
+  width: 35px;
+  height: 35px;
+  font-size: 35px;
+  line-height: 35px;
+  text-align: center;
+  appearance: none;
+  cursor: pointer;
+  transition: all 300ms;
+}
+.star-rating input:focus {
+  outline: none;
+}
+.star-rating input::after {
+  transition: all 300ms;
+  color: #1890FF;
+  /* 这里添加颜色是因为图标可以选择空心线性图标，如果使用这里的非线性图标，就可以使用颜色填充。 */
+  content: "💔";
+}
+.star-rating input:hover {
+  transform: scale(1.2);
+}
+.star-rating input:checked::after,
+.star-rating input:checked ~ input::after,
+.star-rating input:hover::after,
+.star-rating input:hover ~ input::after {
+  color: #f27059;
+  content: "💖";
+}

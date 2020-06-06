@@ -1,0 +1,42 @@
+.step-wrapper {
+  position: relative;
+  width: 300px;
+  margin: 50px auto 0;
+}
+.step-wrapper::after {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background-color: #1890FF;
+  content: "";
+}
+.justify-step {
+  position: relative;
+  width: 100%;
+  height: 24px;
+  margin-bottom: 20px;
+  z-index: 1;
+  /* 下面两个属性是实现这个效果的关键。但是由于第二个属性的兼容性不好，所以还可以通过伪类来代替这个属性。 */
+  text-align: justify;
+  /* text-align-last: justify; */
+}
+/* 这一段代码代替上面的 text-align-last: justify; 属性。 */
+.justify-step::after {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  content: "";
+}
+.justify-step i {
+  display: inline-block;
+  width: 24px;
+  z-index: 999;
+  border-radius: 50%;
+  font-style: normal;
+  overflow: hidden;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #1890FF;
+}

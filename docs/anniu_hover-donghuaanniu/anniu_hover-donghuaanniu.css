@@ -1,20 +1,11 @@
-/* pseudoClassButton */
-* {
-  margin: 0;
-  padding: 0;
-}
-html,
 body {
-  height: 100%;
-  width: 100%;
-}
-.container {
+  background: #2d2d34;
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 100%;
+  align-items: center;
+  height: 100vh;
 }
-.button-wrapper {
+.box {
   width: 120px;
   height: 50px;
   position: relative;
@@ -28,7 +19,7 @@ body {
       -ms-user-select: none;
           user-select: none;
 }
-.button-content {
+.item {
   z-index: 99;
   display: flex;
   justify-content: center;
@@ -53,8 +44,8 @@ body {
 .one:after {
   bottom: 0;
 }
-.one .button-content:before,
-.one .button-content:after {
+.one .item:before,
+.one .item:after {
   height: 100%;
   width: 2px;
   position: absolute;
@@ -64,10 +55,10 @@ body {
   transition: 0.4s all ease;
   content: "";
 }
-.one .button-content:before {
+.one .item:before {
   left: 0;
 }
-.one .button-content:after {
+.one .item:after {
   right: 0;
 }
 .one:hover:before,
@@ -82,10 +73,10 @@ body {
 }
 .one:hover,
 .two:hover {
-  color: white;
+  color: #ffffff;
 }
-.one:hover .button-content:before,
-.one:hover .button-content:after {
+.one:hover .item:before,
+.one:hover .item:after {
   width: 100%;
   transition: 0.4s all ease;
 }
@@ -110,6 +101,30 @@ body {
 }
 .one:active,
 .two:active {
-  color: black;
+  color: #000000;
+}
+.dynamic-border {
+  width: 120px;
+  height: 50px;
+  margin: 15px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 300ms;
+  color: #f27059;
+  background: linear-gradient(0, #f27059 2px, #f27059 2px) no-repeat left top / 0 2px, linear-gradient(-90deg, #f27059 2px, #f27059 2px) no-repeat right top / 2px 0, linear-gradient(-180deg, #f27059 2px, #f27059 2px) no-repeat right bottom / 0 2px, linear-gradient(-270deg, #f27059 2px, #f27059 2px) no-repeat left bottom / 2px 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.dynamic-border:hover {
+  color: #ffffff;
+  background-size: 100% 2px, 2px 100%, 100% 2px, 2px 100%;
+}
+.dynamic-border:active {
+  color: #000000;
 }
 
