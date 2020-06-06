@@ -1,0 +1,27 @@
+.masonry {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
+  grid-auto-rows: 10px;
+}
+.item {
+  grid-row-start: auto;
+  position: relative;
+  padding: 2px;
+  counter-increment: item-counter;
+}
+.item::after {
+  position: absolute;
+  display: block;
+  top: 2px;
+  left: 2px;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  background-color: #000;
+  color: #fff;
+  content: counter(item-counter);
+}
+

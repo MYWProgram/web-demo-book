@@ -1,4 +1,4 @@
-import './main.css'
+import "./main.css";
 
 var clock = null;
 var state = 0;
@@ -8,7 +8,6 @@ function init() {
   for (var i = 0; i < 4; i++) {
     crow();
   }
-
   $("main").onclick = function (ev) {
     judge(ev);
   };
@@ -43,7 +42,6 @@ function move() {
   var top = parseInt(window.getComputedStyle(con, null)["top"]);
   top += 5;
   con.style.top = top + "px";
-
   if (top == 0) {
     crow();
     con.style.top = -150 + "px";
@@ -108,6 +106,6 @@ function creatSn() {
   return Arr;
 }
 
-window.onload = function() {
+window.onload = function () {
   init();
-}
+};

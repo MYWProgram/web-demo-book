@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 导航栏</title>
+  </head>
+  <!--
+    * 1. 相同 name 属性的 radio 单选框组只能有一个处于 checked 状态，用这个特性来模拟导航栏项的单选。
+    * 2. 利用 radio 的可聚焦性，模拟点击事件。
+    * 3. 通过 CSS 派生选择器，对应 radio 单选框，使用 z-index 层级设置来控制内容的显示/隐藏。
+    -->
+  <body>
+    <div class="tabs-wrapper">
+      <div class="tab">
+        <input type="radio" id="radio-first" name="radio-group" />
+        <label for="radio-first">标签一</label>
+        <section>第一个标签的内容</section>
+      </div>
+      <div class="tab">
+        <input type="radio" id="radio-second" name="radio-group" />
+        <label for="radio-second">标签二</label>
+        <section>第二个标签的内容</section>
+      </div>
+      <div class="tab">
+        <input type="radio" id="radio-third" name="radio-group" />
+        <label for="radio-third">标签三</label>
+        <section>第三个标签的内容</section>
+      </div>
+    </div>
+  </body>
+</html>
