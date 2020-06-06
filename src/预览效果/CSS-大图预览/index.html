@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 大图预览</title>
+  </head>
+  <!--
+  * 通过 a 标签描点定位元素，href 和 id一致模拟点击；
+  * 通过添加伪类 :target 选择器来控制大图的显示/隐藏。
+  -->
+  <body>
+    <div class="wrapper">
+      <a href="#img-pre_first">
+        <img
+          src="https://placehold.it/90x42"
+          alt=""
+        />
+      </a>
+      <a href="#img-pre_second">
+        <img
+          src="https://picsum.photos/90/42"
+          alt=""
+        />
+      </a>
+      <a href="#" id="img-pre_first" class="img-box">
+        <img
+          src="https://placehold.it/900x420"
+          alt=""
+        />
+      </a>
+      <a href="#" id="img-pre_second" class="img-box">
+        <img
+          src="https://picsum.photos/900/420"
+          alt=""
+        />
+      </a>
+    </div>
+  </body>
+</html>

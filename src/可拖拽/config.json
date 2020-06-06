@@ -3,6 +3,14 @@
     {
       "title": "draggable元素",
       "src": "./draggable元素"
+    },
+    {
+      "title": "CSS-可调节分栏",
+      "src": "./CSS-可调节分栏"
+    },
+    {
+      "title": "JS-可调节分栏",
+      "src": "./JS-可调节分栏"
     }
   ]
 }

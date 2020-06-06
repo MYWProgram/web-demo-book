@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>placeholder 动画登录框</title>
+  </head>
+  <!--
+    * :placeholder-shown 选中显示了 placeholder 的 input、textarea 标签；
+    * + 相邻选择器选中 focus 之后相邻的 input，使用 translateX 配合 calc() 来进行位置计算并且添加动画。
+    -->
+  <body>
+    <h2>Login</h2>
+    <div class="row">
+      <input type="text" id="username" placeholder=" " />
+      <label for="username">username</label>
+    </div>
+    <div class="row">
+      <input type="password" id="password" placeholder=" " />
+      <label for="password">password</label>
+      <button>
+        <svg
+          width="24px"
+          height="24px"
+          viewBox="0 0 180 180"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+        >
+          <g
+            id="Page-1"
+            stroke="none"
+            stroke-width="1"
+            fill="none"
+            fill-rule="evenodd"
+          >
+            <g id="Artboard">
+              <g id="Group">
+                <circle
+                  id="Oval"
+                  stroke="#2E3131"
+                  stroke-width="15"
+                  cx="90"
+                  cy="90"
+                  r="82.5"
+                ></circle>
+                <polygon
+                  id="Triangle"
+                  fill="#2E3131"
+                  transform="translate(98.000000, 90.000000) rotate(90.000000) translate(-98.000000, -90.000000) "
+                  points="98 62 140 118 56 118"
+                ></polygon>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </button>
+    </div>
+  </body>
+</html>

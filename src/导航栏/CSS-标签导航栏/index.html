@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 标签导航栏</title>
+  </head>
+  <!--
+    * ~ 兄弟选择器搭配 input 与 label 标签实现选项卡导航栏。
+    -->
+  <body>
+    <div class="tab-navbar">
+      <input type="radio" name="tabs" id="tab1" hidden checked />
+      <input type="radio" name="tabs" id="tab2" hidden />
+      <input type="radio" name="tabs" id="tab3" hidden />
+      <input type="radio" name="tabs" id="tab4" hidden />
+      <nav>
+        <label for="tab1">JS</label>
+        <label for="tab2">Vue</label>
+        <label for="tab3">React</label>
+        <label for="tab4">Ag</label>
+      </nav>
+      <main>
+        <ul>
+          <li>JS</li>
+          <li>Vue</li>
+          <li>React</li>
+          <li>Ag</li>
+        </ul>
+      </main>
+    </div>
+  </body>
+</html>

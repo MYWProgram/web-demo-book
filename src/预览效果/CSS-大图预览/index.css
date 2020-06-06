@@ -1,0 +1,21 @@
+.wrapper {
+  width: 250px;
+  margin: 30px auto;
+}
+.img-box {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 1);
+  z-index: 999;
+}
+.img-box:target {
+  display: block;
+}
+.img-box img {
+  margin-top: 100px;
+}
