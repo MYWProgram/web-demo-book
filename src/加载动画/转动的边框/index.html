@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>转动的边框</title>
+  </head>
+  <!--
+    * 使用 clip-path 配合动画，裁剪显示伪类添加的边框；
+    * clip-path: inset(top, right, bottom, left); 上、右、下、左定义矩形各方向向内裁剪的距离；
+    * clip: rect(); 也可以实现本 Demo 中的需求，但是这个属性会慢慢被放弃。
+    -->
+  <body>
+    <div class="snakelike-border"></div>
+  </body>
+</html>

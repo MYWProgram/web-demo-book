@@ -23,9 +23,9 @@
 }
 /* 线圈以及实心小圆的部分。 */
 .spinner-dot {
-  stroke: skyblue;
+  stroke: tomato;
   stroke-width: 1;
-  fill: skyblue;
+  fill: tomato;
   /* 小球动画的各种属性。 */
   animation: skew 2s linear infinite alternate;
 }

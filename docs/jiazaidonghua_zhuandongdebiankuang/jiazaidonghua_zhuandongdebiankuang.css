@@ -1,0 +1,53 @@
+:root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+.snakelike-border {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: #ffffff;
+}
+.snakelike-border::before,
+.snakelike-border::after {
+  position: absolute;
+  left: -5px;
+  right: -5px;
+  top: -5px;
+  bottom: -5px;
+  border: 5px solid;
+  content: "";
+  animation: move 5s linear infinite;
+}
+.snakelike-border::before {
+  border-color: tomato;
+}
+.snakelike-border::after {
+  border-color: yellowgreen;
+  animation-delay: -2.5s;
+}
+@keyframes move {
+  0%,
+  100% {
+    -webkit-clip-path: inset(0 100px 0 0);
+            clip-path: inset(0 100px 0 0);
+  }
+  25% {
+    -webkit-clip-path: inset(100px 0 0 0);
+            clip-path: inset(100px 0 0 0);
+  }
+  50% {
+    -webkit-clip-path: inset(0 0 0 100px);
+            clip-path: inset(0 0 0 100px);
+  }
+  75% {
+    -webkit-clip-path: inset(0 0 100px 0);
+            clip-path: inset(0 0 100px 0);
+  }
+}
+
