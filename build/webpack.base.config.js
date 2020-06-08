@@ -1,8 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
-  .BundleAnalyzerPlugin;
 
 let dotenv = require("dotenv");
 const path = require("path");
@@ -130,6 +128,5 @@ module.exports = {
         flatten: false,
       },
     ]),
-    new BundleAnalyzerPlugin(),
   ],
 };
