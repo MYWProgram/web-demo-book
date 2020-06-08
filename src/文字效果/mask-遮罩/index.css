@@ -1,0 +1,23 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+.mask {
+  height: 100px;
+  width: 100px;
+  background-image: linear-gradient(
+    red,
+    orange,
+    yellow,
+    lightgreen,
+    blue,
+    purple,
+    red
+  );
+  mask: url("https://github.githubassets.com/pinned-octocat.svg");
+}

@@ -1,0 +1,39 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+.example-mobile-scroll_y {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.scroller {
+  height: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+}
+section {
+  margin: 0;
+  padding: 0;
+}
+.scroller section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  scroll-snap-align: start;
+}
+section:first-child {
+  background-image: linear-gradient(25deg, #254cce, #8a7ace, #c8adcb, #ffe3c6);
+}
+section:nth-child(2) {
+  background-image: linear-gradient(25deg, #ea002e, #ed6d6c, #e3a7af, #c3ddf7);
+}
+section:last-child {
+  background-image: linear-gradient(25deg, #ff0c35, #de8437, #acbd3a, #41ed3d);
+}
+

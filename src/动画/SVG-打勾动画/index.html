@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG 打勾动画</title>
+  </head>
+  <!--
+    * stroke-dasharray 可控制用来描边的点划线的图案范式。
+    * stroke-dashoffset 属性指定了 dash 模式到路径开始的距离。
+    -->
+  <body>
+    <input type="checkbox" />toggle
+    <svg width="400" height="400">
+      <circle
+        class="circle"
+        fill="none"
+        cx="200"
+        cy="200"
+        r="190"
+        stroke="#68E534"
+        stroke-width="20"
+        stroke-linecap="round"
+      />
+      <polyline
+        class="tick"
+        fill="none"
+        points="88,214 173,284 304,138"
+        stroke="#68E534"
+        stroke-width="24"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+    <h2>Payment Success</h2>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+.tips {
+  position: relative;
+  height: 40px;
+  padding: 0 20px;
+  line-height: 40px;
+  border-radius: 10px;
+  color: #fff;
+  background-color: tomato;
+  cursor: pointer;
+}
+.tips::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  text-align: center;
+  transition: all 300ms;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  content: attr(data-msg);
+}
+.tips:hover::after {
+  left: calc(100% + 20px);
+  opacity: 1;
+}
+

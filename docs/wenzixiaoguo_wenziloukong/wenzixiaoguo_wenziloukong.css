@@ -1,0 +1,29 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-clip: text; */
+}
+.wrapper > h1 {
+  padding: 0.5em;
+  font-size: 80px;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+  background-color: #000000;
+}
+.wrapper > h1 > span {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.bg {
+  height: 100%;
+  background-image: linear-gradient(25deg, #fb2c2f, #eb852b, #d2bd22, #a9ef0c);
+  /* background-attachment: fixed; */
+}
+
