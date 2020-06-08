@@ -1,2 +1,2 @@
 import "./css/style.css";
-import "./js/js";
+import "./js/ball.js";

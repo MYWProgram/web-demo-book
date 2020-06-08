@@ -2,7 +2,7 @@ const path = require("path");
 const merge = require("webpack-merge");
 const webpackConfigBase = require("./webpack.base.config");
 const OpenBrowserPlugin = require("open-browser-webpack-plugin");
-const port = 9000;
+const port = 9527;
 const webpackConfigDev = {
   devtool: "cheap-module-eval-source-map",
   mode: process.env.NODE_ENV,

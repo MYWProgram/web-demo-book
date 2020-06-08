@@ -67,7 +67,7 @@ module.exports = {
           {
             loader: "url-loader",
             options: {
-              limit: 10000, //10K
+              limit: 10000,
               esModule: false,
               name: "[hash:6].[ext]",
               outputPath: (url, resourcePath) => {
