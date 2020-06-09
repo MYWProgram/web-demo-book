@@ -28,7 +28,7 @@
 }
 ```
 
-- 打包的时候需要配置根目录下`.env.production`文件的`PUBLICPATH`为静态文件根路径。比如当前`demobar`项目放在`https://MYWProgram.github.io/demo-book/`域名路径下，那么`PUBLICPATH`可以设置为`/demo-book/`或者`https://MYWProgram.github.io/demo-book/`。
+- 打包的时候需要配置根目录下`.env.production`文件的`PUBLICPATH`为静态文件根路径。比如当前`demo-book`项目放在`https://MYWProgram.github.io/demo-book/`域名路径下，那么`PUBLICPATH`可以设置为`/demo-book/`或者`https://MYWProgram.github.io/demo-book/`。
 
 ### dependences version
 
