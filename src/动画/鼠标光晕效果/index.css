@@ -1,0 +1,8 @@
+.box {
+  --x: 0px;
+  --y: 0px;
+  height: 500px;
+  width: 500px;
+  margin: 0 auto;
+  background: radial-gradient(circle at var(--x) var(--y), skyblue, black);
+}

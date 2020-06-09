@@ -1,3 +1,6 @@
+h1 {
+  font-size: 24px;
+}
 /* 案例一对应 CSS 代码。 */
 .container {
   display: flex;
@@ -52,19 +55,17 @@
   background-color: gray;
   cursor: pointer;
 }
-
 /* 案例二对应 CSS 代码。 */
 .item {
   width: 100px;
   height: 100px;
   background-color: skyblue;
-  margin: 15px 10px 0 0;
+  margin: 0 10px 0 0;
 }
 .container > i {
   width: 100px;
   margin-right: 10px;
 }
-
 /* 案例三对应 CSS 代码。 */
 .box-container {
   display: flex;
@@ -82,7 +83,6 @@
 .box:not(:nth-child(4n)) {
   margin-right: calc(4% / 3);
 }
-
 /* 案例四对应 CSS 代码。 */
 .item-wrapper {
   margin-top: 10px;

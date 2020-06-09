@@ -1,3 +1,6 @@
+h1 {
+  font-size: 24px;
+}
 /* 案例一对应 CSS 代码。 */
 .container {
   display: flex;
@@ -57,7 +60,7 @@
   width: 100px;
   height: 100px;
   background-color: skyblue;
-  margin: 15px 10px 0 0;
+  margin: 0 10px 0 0;
 }
 .container > i {
   width: 100px;

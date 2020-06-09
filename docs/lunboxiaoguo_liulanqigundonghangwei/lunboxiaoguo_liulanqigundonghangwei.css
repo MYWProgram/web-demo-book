@@ -1,0 +1,88 @@
+* {
+  scroll-behavior: smooth;
+}
+input[type="radio"]:checked + div {
+  display: block;
+}
+/* 案例一对应 CSS 代码。 */
+.example-back-to_top {
+  width: 100%;
+  height: 9999px;
+  position: absolute;
+  display: none;
+}
+.wrapper {
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+  border: 1px solid #333333;
+  background-color: red;
+}
+.back-to-top_link {
+  position: fixed;
+  top: 10%;
+  right: 1%;
+}
+.scrollTo-button {
+  position: fixed;
+  top: 14%;
+  right: 0;
+}
+.scrollBy-button {
+  position: fixed;
+  top: 18%;
+  right: 0;
+}
+.scrollTop-button {
+  position: fixed;
+  top: 22%;
+  right: 0;
+}
+/* 案例二对应 CSS 代码。 */
+.example-ele_show {
+  width: 100%;
+  height: 9999px;
+  position: absolute;
+  display: none;
+}
+.box {
+  height: 100px;
+  width: 100px;
+  margin: 800px auto;
+  background-color: green;
+}
+.scrollIntoView-button {
+  position: fixed;
+  top: 10%;
+  right: 0;
+}
+/* 案例三对应 CSS 代码。 */
+.example-go-to_bottom {
+  width: 100%;
+  height: 9999px;
+  position: absolute;
+  display: none;
+}
+.scrollHeight-button {
+  position: fixed;
+  top: 10%;
+  right: 0;
+}
+/* 案例四对应 CSS 代码。 */
+.example-mobile {
+  width: 100%;
+  height: 9999px;
+  position: absolute;
+  display: none;
+}
+.text-box {
+  width: 100px;
+  height: 150px;
+  margin: 0px auto;
+  overflow: auto;
+  /* 注意这里的 -webkit- 前缀。 */
+  -webkit-overflow-scrolling: touch;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: contain;
+}
+

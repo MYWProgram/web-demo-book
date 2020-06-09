@@ -18,7 +18,7 @@
     * 4. 如果不能直接操作 HTML 结构，同时布局的列表个数也不固定，此时建议使用 Grid 布局。
   -->
   <body>
-    <!-- 案例一对应 HTML 代码。 -->
+    <h1>行个数确定，考虑最后一行个数的情况，width + flex + 计算 margin</h1>
     <div class="container">
       <div class="list"></div>
       <div class="list"></div>
@@ -38,8 +38,7 @@
         <div class="addItem">添加</div>
       </div>
     </div>
-
-    <!-- 案例二对应 HTML 代码。 -->
+    <h1>行个数不确定，使用占位方式来补充</h1>
     <div class="container">
       <div class="item"></div>
       <div class="item"></div>
@@ -53,8 +52,7 @@
       <div class="item"></div>
       <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
     </div>
-
-    <!-- 案例三对应 HTML 代码。 -->
+    <h1>行个数确定，计算最后一个元素所处的位置</h1>
     <div class="box-container">
       <div class="box"></div>
       <div class="box"></div>
@@ -67,8 +65,7 @@
       <div class="box"></div>
       <div class="box"></div>
     </div>
-
-    <!-- 案例四对应 HTML 代码。-->
+    <h1>不确定行个数的情况，建议使用 Grid 布局</h1>
     <div class="item-wrapper">
       <div class="item-content"></div>
       <div class="item-content"></div>
