@@ -1,0 +1,11 @@
+html,
+body {
+  margin: 0;
+}
+#particle-canvas {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(25deg, #cd4055, #d96e59, #e4965c, #ecbc5e);
+  vertical-align: middle;
+}
+
