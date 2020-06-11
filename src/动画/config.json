@@ -23,6 +23,10 @@
     {
       "title": "CSS-背景动画",
       "src": "./CSS-背景动画"
+    },
+    {
+      "title": "mousemove-背景动画",
+      "src": "./mousemove-背景动画"
     }
   ]
 }
