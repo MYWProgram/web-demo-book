@@ -6,23 +6,13 @@
     <title>视差滚动</title>
   </head>
   <!--
-    * perspective: z; 指定了观察者与 z=0 平面的距离，使具有三维位置变换的元素产生透视效果；z>0 的三维元素比正常大，而 z<0 时则比正常小；
-    * transform-style 设置元素的子元素是位于 3d 还是平面空间；
     * background-attachment: fixed; 背景相对于视口固定；即使一个元素拥有滚动机制，背景也不会随着元素的内容滚动。
     -->
   <body>
     <div class="scroll-wrapper">
-      <ul class="parallax-scrolling">
-        <!-- <li>translateZ(-1px)</li>
-        <li>translateZ(-2px)</li>
-        <li>translateZ(-3px)</li> -->
-      </ul>
+      <div class="parallax-scrolling"></div>
       <p>Content</p>
-      <ul class="parallax-scrolling">
-        <!-- <li>translateZ(-1px)</li>
-        <li>translateZ(-2px)</li>
-        <li>translateZ(-3px)</li> -->
-      </ul>
+      <div class="parallax-scrolling"></div>
     </div>
   </body>
 </html>
