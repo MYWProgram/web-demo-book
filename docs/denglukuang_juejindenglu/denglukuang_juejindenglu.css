@@ -1,0 +1,77 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #999;
+}
+.bubble-distribution {
+  position: relative;
+  margin-top: 50px;
+  padding: 25px;
+  width: 320px;
+  border-radius: 2px;
+  background-color: #fff;
+}
+.bubble-distribution h1 {
+  font-size: 16px;
+  text-align: center;
+}
+.bubble-distribution div {
+  margin-top: 10px;
+}
+.bubble-distribution img {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 120px;
+  margin: 0 0 -20px -60px;
+}
+.bubble-distribution input[type="text"],
+.bubble-distribution input[type="password"] {
+  width: 92.5%;
+  height: 20px;
+  padding: 10px;
+  border: 1px solid #e9e9e9;
+  border-radius: 2px;
+  outline: none;
+  transition: all 300ms;
+}
+.bubble-distribution input[type="text"]:focus:valid,
+.bubble-distribution input[type="password"]:focus:valid {
+  border-color: #09f;
+}
+.bubble-distribution input[type="text"]:focus:invalid,
+.bubble-distribution input[type="password"]:focus:invalid {
+  border-color: #f66;
+}
+.bubble-distribution button {
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  overflow: hidden;
+  transition: all 300ms;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  background-color: #09f;
+  outline: none;
+  cursor: pointer;
+}
+.accout img,
+.password img {
+  display: none;
+  margin-bottom: -27px;
+}
+.accout:focus-within img,
+.password:focus-within img {
+  display: inline-block;
+}
+.accout:focus-within ~ img,
+.password:focus-within ~ img {
+  display: none;
+}
+
