@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BliBli 登录</title>
+  </head>
+  <body>
+    <form class="bubble-distribution">
+      <h3>注册</h3>
+      <div class="accout">
+        <input
+          type="text"
+          placeholder="请输入手机或邮箱"
+          pattern="^1[3456789]\d{9}$|^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$"
+          required
+        />
+        <img
+          src="https://b-gold-cdn.xitu.io/v3/static/img/greeting.1415c1c.png"
+        />
+      </div>
+      <div class="password">
+        <input
+          type="password"
+          placeholder="请输入密码(6到20位字符)"
+          pattern="^[\dA-Za-z_]{6,20}$"
+          required
+        />
+        <img
+          src="https://b-gold-cdn.xitu.io/v3/static/img/blindfold.58ce423.png"
+        />
+      </div>
+      <div class="code">
+        <input
+          type="text"
+          placeholder="请输入邀请码(6位数字)"
+          pattern="^[\d]{6}$"
+          maxlength="6"
+          required
+        />
+        <button type="button">查询</button>
+        <img
+          src="https://b-gold-cdn.xitu.io/v3/static/img/greeting.1415c1c.png"
+        />
+      </div>
+      <img src="https://b-gold-cdn.xitu.io/v3/static/img/normal.0447fe9.png" />
+      <ul>
+        <li>
+          <input type="radio" name="sex" id="male" />
+          <label for="male">Boy</label>
+        </li>
+        <li>
+          <input type="radio" name="sex" id="female" />
+          <label for="female">Girl</label>
+        </li>
+      </ul>
+      <button type="button">注册</button>
+    </form>
+  </body>
+</html>
