@@ -1,9 +1,8 @@
 body {
   display: grid;
-  grid-template-rows: 1fr;
+  grid-template-rows: repeat(2, minmax(100px, 200px));
   grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-  align-items: center;
+  place-items: center start;
 }
 h1 {
   font-size: 16px;
@@ -41,18 +40,19 @@ h1 {
 }
 /* switch */
 .switch {
-  width: 52px;
-  height: 31px;
   position: relative;
   display: inline-block;
+  width: 52px;
+  height: 31px;
   border: 1px solid #dfdfdf;
   border-radius: 20px;
+  outline: none;
+  box-shadow: #dfdfdf 0 0 0 0 inset;
   background-clip: content-box;
   background-color: #fdfdfd;
-  box-shadow: #dfdfdf 0 0 0 0 inset;
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; */
+  appearance: none;
   user-select: none;
-  outline: none;
   cursor: pointer;
 }
 .switch:before {
@@ -109,20 +109,20 @@ h1 {
   display: none;
 }
 .single label {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   position: relative;
   display: inline-block;
   border: 1px solid #333333;
   border-radius: 50%;
 }
 .single label::after {
-  width: 20px;
-  height: 20px;
+  width: 12px;
+  height: 12px;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: -11px 0px 0px -11px;
+  margin: -7px 0 0 -7px;
   border: 1px solid #333333;
   border-radius: 50%;
   transition: all 0.5s ease;
@@ -136,14 +136,15 @@ h1 {
 /* 移动端单选。 */
 .single-checkbox_wrapper {
   display: flex;
-  margin-top: 20px;
 }
 .single-checkbox_item {
   position: relative;
-  margin-left: 15px;
   border-radius: 1em;
   background-color: silver;
   user-select: none;
+}
+.single-checkbox_item:not(:first-child) {
+  margin-left: 10px;
 }
 .input {
   position: absolute;
@@ -161,5 +162,5 @@ h1 {
 }
 .input:checked + .colors {
   color: #ffffff;
-  background-color: tomato;
+  background-color: #64bd63;
 }
