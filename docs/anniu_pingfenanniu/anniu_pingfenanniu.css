@@ -28,9 +28,8 @@ body {
 }
 .star-rating input::after {
   transition: all 300ms;
-  color: #1890FF;
-  /* 这里添加颜色是因为图标可以选择空心线性图标，如果使用这里的非线性图标，就可以使用颜色填充。 */
-  content: "💔";
+  color: tomato;
+  content: "☆";
 }
 .star-rating input:hover {
   transform: scale(1.2);
@@ -39,7 +38,7 @@ body {
 .star-rating input:checked ~ input::after,
 .star-rating input:hover::after,
 .star-rating input:hover ~ input::after {
-  color: #f27059;
-  content: "💖";
+  color: #1890FF;
+  content: "★";
 }
 

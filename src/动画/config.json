@@ -27,6 +27,10 @@
     {
       "title": "mousemove-背景动画",
       "src": "./mousemove-背景动画"
+    },
+    {
+      "title": "mousein-头像旋转",
+      "src": "./mousein-头像旋转"
     }
   ]
 }

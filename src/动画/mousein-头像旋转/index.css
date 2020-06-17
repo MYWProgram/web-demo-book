@@ -1,0 +1,20 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url(https://picsum.photos/200/200);
+}
+.avatar:hover {
+  transform: rotate(666turn);
+  transition-duration: 59s;
+  transition-timing-function: cubic-bezier(.34, 0, .84, 1)
+}
