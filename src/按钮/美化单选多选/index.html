@@ -6,26 +6,42 @@
     <title>美化单选多选</title>
   </head>
   <!--
-    * 美化单选框、多选框、switch 都是首先隐藏 input 标签，然后从 label 标签入手美化样式，谨记 label 标签的 for 属性内容和 input 的 id 写为一致；这样点选 label 标签就可以点到 input 了。
+    * 美化单选框、多选框、switch 都是首先隐藏 input 标签，然后从 label 标签入手美化样式，谨记 label 标签的 for 属性内容和 input 的 id 写为一致；这样点选 label 标签就可以聚焦对应的 input 了。
     * 1. 勾勾的样式通过伪类添加在 label 标签上，并且当选中 input 标签之后，紧邻的兄弟元素 label 的伪类部分样式才会生效；这个选中的效果使用 :checked 来实现。
     *    注意 label 标签的伪类在未选中的情况下透明，选中的情况下不透明；也就是设置 opacity 的改变，当然也可以使用 display: none; 和 display: inline; 来实现。
+    * 4. CSS 中的 + 表示选择某个元素紧邻的一个兄弟元素；与之对应的 ~ 选择器表示查找某个元素后的所有兄弟元素。
     -->
   <body>
     <div class="multiple">
-      <!-- 案例一对应 HTML 代码。 -->
+      <h1>checkbox</h1>
       <input type="checkbox" id="checkbox" />
       <label for="checkbox"></label>
     </div>
     <div>
-      <!-- 案例二对应 HTML 代码。 -->
+      <h1>switch</h1>
       <input class="switch" type="checkbox" />
       <input class="switch switch-animbg" type="checkbox" />
       <input class="switch switch-anim" type="checkbox" />
     </div>
     <div class="single">
-      <!-- 案例三对应 HTML 代码。 -->
+      <h1>radio</h1>
       <input type="radio" id="radio" />
       <label for="radio"></label>
+    </div>
+    <div class="single-checkbox_wrapper">
+      <h1>移动端单选</h1>
+      <div class="single-checkbox_item">
+        <input class="input" type="radio" name="colors" value="1" />
+        <div class="colors">深空灰</div>
+      </div>
+      <div class="single-checkbox_item">
+        <input class="input" type="radio" name="colors" value="2" />
+        <div class="colors">土豪金</div>
+      </div>
+      <div class="single-checkbox_item">
+        <input class="input" type="radio" name="colors" value="3" />
+        <div class="colors">魅雅红</div>
+      </div>
     </div>
   </body>
 </html>

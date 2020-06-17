@@ -5,7 +5,11 @@ body {
   justify-items: center;
   align-items: center;
 }
-/* 案例一对应 CSS 代码。 */
+h1 {
+  font-size: 16px;
+  font-family: Helvetica;
+}
+/* checkbox */
 .multiple input {
   display: none;
 }
@@ -35,8 +39,7 @@ body {
   border-right: none;
   opacity: 1;
 }
-
-/* 案例二对应 CSS 代码。 */
+/* switch */
 .switch {
   width: 52px;
   height: 31px;
@@ -96,14 +99,12 @@ body {
 .switch.switch-anim:checked {
   box-shadow: #64bd63 0 0 0 16px inset;
   background-color: #64bd63;
-  transition: border ease 0.4s, box-shadow ease 0.4s,
-    background-color ease 1.2s;
+  transition: border ease 0.4s, box-shadow ease 0.4s, background-color ease 1.2s;
 }
 .switch.switch-anim:checked:before {
   transition: left 0.3s;
 }
-
-/* 案例三对应 CSS 代码。 */
+/* radio */
 .single input {
   display: none;
 }
@@ -131,4 +132,34 @@ body {
 }
 .single input:checked + label::after {
   background: #64bd63;
+}
+/* 移动端单选。 */
+.single-checkbox_wrapper {
+  display: flex;
+  margin-top: 20px;
+}
+.single-checkbox_item {
+  position: relative;
+  margin-left: 15px;
+  border-radius: 1em;
+  background-color: silver;
+  user-select: none;
+}
+.input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.colors {
+  height: 2em;
+  padding: 0 1em;
+  font-size: 14px;
+  line-height: 2em;
+  border-radius: 1em;
+}
+.input:checked + .colors {
+  color: #ffffff;
+  background-color: tomato;
 }
