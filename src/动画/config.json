@@ -31,6 +31,10 @@
     {
       "title": "mousein-头像旋转",
       "src": "./mousein-头像旋转"
+    },
+    {
+      "title": "mousemove-视频预览动画",
+      "src": "./mousemove-视频预览动画"
     }
   ]
 }

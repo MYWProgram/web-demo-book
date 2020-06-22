@@ -1,4 +1,4 @@
 $(document).ready(function () {
-  console.log(pagesConfig);
+  // console.log(pagesConfig);
   // $('.search-content')
 });

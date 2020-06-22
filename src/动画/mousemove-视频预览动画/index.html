@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mousemove 视频预览动画</title>
+  </head>
+  <!--
+    * 设置父元素为相对定位，其余子元素全部为绝对定位；保证单张显示图和多张合一的精灵图层级显示，并使用透明度来控制两类图片容器的显示；
+    * 鼠标移入容器之后，通过 offsetX 一系列变量，设置精灵图容器的 background-image、-position、-size 覆盖单图容器并进行移动。
+    -->
+  <body>
+    <div class="avatar-wrapper">
+      <div class="pic">
+        <div class="lazy-img">
+          <img src="./bg-single.png" />
+        </div>
+        <i class="icon medal"></i>
+        <div class="cpm show">
+          <div class="cover"></div>
+          <div class="progress-bar"><span style="width: 10%;"></span></div>
+        </div>
+        <div class="mask-video"></div>
+      </div>
+    </div>
+  </body>
+</html>

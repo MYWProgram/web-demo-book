@@ -7,7 +7,6 @@ import { pageChange, setNavItemClickEvent } from "./static/js/page";
 import { setToggleEvent, setNavActive } from "./static/js/nav";
 import { setIframeLoadingEvent } from "./static/js/iframeLoading";
 import "./static/js/search";
-import "./static/js/live2d_cat";
 
 // * 监听 hash 改变。
 window.onhashchange = () => {

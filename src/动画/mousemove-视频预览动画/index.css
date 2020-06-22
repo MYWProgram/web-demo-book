@@ -1,0 +1,85 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  background: #fff;
+}
+.avatar-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.pic {
+  position: relative;
+  display: block;
+  width: 203px;
+  height: 370px;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.pic img {
+  margin: 0 auto;
+  outline: 0;
+}
+.pic .medal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 24px;
+  pointer-events: none;
+}
+.cpm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+.progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  border-width: 4px 8px;
+  border-style: solid;
+  border-color: #000;
+  background-color: #444;
+  box-sizing: border-box;
+}
+.cpm .progress-bar span {
+  display: block;
+  height: 2px;
+  background-color: #fff;
+}
+.mask-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+}
+.show {
+  opacity: 1;
+}
+.cpm .cover {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  height: 360px;
+  width: 100%;
+  margin-top: 2px;
+}
