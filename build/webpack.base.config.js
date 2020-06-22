@@ -67,7 +67,7 @@ module.exports = {
             options: {
               limit: 10000,
               esModule: false,
-              name: "[hash:6].[ext]",
+              name: "[name]-[hash:6].[ext]",
               outputPath: (url, resourcePath) => {
                 const pathName = getName(resourcePath);
                 return `${pathName}/${url}`;
@@ -114,7 +114,7 @@ module.exports = {
         removeAttributeQuotes: false,
         collapseWhitespace: false,
       },
-      title: "DEMOBAR",
+      title: "DEMO-BOOK",
       templateParameters: {
         pagesConfig: pagesConfig,
         publicPath: process.env.PUBLICPATH,

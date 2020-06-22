@@ -1,4 +1,5 @@
 import "./index.css";
+const bgMult = require('./bg-mult.png');
 
 var data = {
   len_x: 20,
@@ -17,7 +18,7 @@ document.querySelector('.pic').addEventListener('mousemove', function(event) {
   this.y = -Math.floor(i / data.len_x) * e;
   var self = this;
   document.querySelector('.cover').style = `
-    background-image: url("./bg-mult.png");
+    background-image: url(${bgMult});
     background-position: ${self.x}px ${self.y}px;
     background-size: ${self.size} px;
   `;

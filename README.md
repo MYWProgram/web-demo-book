@@ -1,4 +1,4 @@
-# demobar
+# demo-book
 
 使用 webpack 构建方便编写 demo 的多页面脚手架，适合开发者编写 demo 页面，提供分类预览的功能。
 
