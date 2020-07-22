@@ -1,7 +1,7 @@
 import nProgress from "nprogress";
 
 // * 监听 hash 变化，设置内嵌页面
-export function pageChange() {
+export const pageChange = () => {
   const pathName = window.location.hash.substr(1);
   if (pathName && pathName.length > 1) {
     nProgress.start();
@@ -24,6 +24,10 @@ export function setNavItemClickEvent() {
     e.preventDefault();
   });
 }
+
+export const clearPath = () => {
+  window.location.hash = "";
+};
 
 // * 设置iframe标签src
 function setIframeSrc(pathName) {

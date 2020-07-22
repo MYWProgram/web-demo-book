@@ -1,10 +1,10 @@
 .theme1 {
-  @backgroundColor: #1d1e23;
+  @backgroundColor: #566d97;
   @navItemDefaultColor: hsla(0, 0%, 100%, 0.7);
   @navItemActiveColor: #fff;
   @navItemActiveBackGround: rgba(179, 212, 252, 0.3);
-  @navItemHoverBackGround: #1d1e23;
-  @titleBackground: -webkit-linear-gradient(left top, #f6ca9d, #eb9743, #000);
+  @navItemHoverBackGround: #36445e;
+  @titleBackground: white;
 }
 .ellipsis {
   overflow: hidden;
@@ -29,8 +29,7 @@ body,
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  width: 300px;
-  // border-right: thin solid rgba(0,0,0,.12);
+  width: 250px;
   background-color: @backgroundColor;
   #menu {
     flex: 1;
@@ -39,10 +38,8 @@ body,
   .title {
     text-align: center;
     line-height: 60px;
-    // color: #f6ca9d;
-    background-image: @titleBackground;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-weight: lighter;
+    color: @titleBackground;
   }
   .search {
     padding: 10px;
@@ -50,15 +47,6 @@ body,
     .input-group-addon {
       cursor: pointer;
     }
-    // #search-content{
-    //   position: absolute;
-    //   height: 300px;
-    //   background-color: rgba(255,255,255,0.8);
-    //   border-radius: 3px;
-    //   left: 10px;
-    //   right: 10px;
-    //   margin-top: 10px;
-    // }
   }
   .list-block {
     display: flex;

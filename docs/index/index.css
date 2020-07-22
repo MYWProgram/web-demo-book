@@ -20,8 +20,8 @@ body,
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  width: 300px;
-  background-color: #1d1e23;
+  width: 250px;
+  background-color: #566d97;
 }
 .app > .left #menu {
   flex: 1;
@@ -30,10 +30,8 @@ body,
 .app > .left .title {
   text-align: center;
   line-height: 60px;
-  background-image: -webkit-linear-gradient(left top, #f6ca9d, #eb9743, #000);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-weight: lighter;
+  color: white;
 }
 .app > .left .search {
   padding: 10px;
@@ -55,7 +53,7 @@ body,
   color: hsla(0, 0%, 100%, 0.7);
 }
 .app > .left .list-block:hover {
-  background-color: #1d1e23;
+  background-color: #36445e;
 }
 .app > .left .list-header {
   font-weight: 600;
