@@ -36,7 +36,7 @@ body {
   position: absolute;
   background-color: #f27059;
   transition: 0.4s all ease;
-  content: "";
+  content: '';
 }
 .one:before {
   top: 0;
@@ -53,7 +53,7 @@ body {
   z-index: -1;
   background-color: #f27059;
   transition: 0.4s all ease;
-  content: "";
+  content: '';
 }
 .one .item:before {
   left: 0;
@@ -93,7 +93,7 @@ body {
   z-index: -1;
   background-color: #f27059;
   transition: 0.4s all ease;
-  content: "";
+  content: '';
 }
 .two:hover:before {
   width: 100%;

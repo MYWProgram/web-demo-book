@@ -24,6 +24,6 @@ body {
   transform: translateY(-50%) rotate(45deg);
   background-color: #e0e0e0;
   overflow: hidden;
-  content: "";
+  content: '';
 }
 

@@ -24,7 +24,7 @@
   background-color: lightgreen;
 }
 .circle-inside_demo1::after {
-  content: "";
+  content: '';
   width: 50px;
   height: 50px;
   position: absolute;
@@ -44,7 +44,7 @@
 .circle-wrapper_demo2::after {
   width: 50px;
   height: 50px;
-  content: "";
+  content: '';
   display: block;
   position: relative;
   top: 25px;
@@ -66,9 +66,5 @@
   height: 150px;
   border-radius: 50%;
   /* background: -webkit-radial-gradient(circle closest-side, lightgreen 50%, lightblue 50%); */
-  background: radial-gradient(
-    circle closest-side,
-    lightgreen 50%,
-    lightblue 50%
-  );
+  background: radial-gradient(circle closest-side, lightgreen 50%, lightblue 50%);
 }

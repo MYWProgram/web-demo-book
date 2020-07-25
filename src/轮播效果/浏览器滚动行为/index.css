@@ -1,7 +1,7 @@
 * {
   scroll-behavior: smooth;
 }
-input[type="radio"]:checked + div {
+input[type='radio']:checked + div {
   display: block;
 }
 /* 案例一对应 CSS 代码。 */

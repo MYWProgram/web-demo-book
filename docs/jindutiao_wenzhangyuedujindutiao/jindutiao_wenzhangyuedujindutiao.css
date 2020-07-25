@@ -35,12 +35,12 @@ footer {
     top: 128px;
     bottom: 0;
     z-index: -1;
-    content: "";
+    content: '';
     background-color: #ffffff;
   }
 }
 body {
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
   font-size: 1.25rem;
 }
 main,
@@ -50,6 +50,6 @@ footer {
   box-sizing: border-box;
 }
 p::before {
-  content: "\2003\2003";
+  content: '\2003\2003';
 }
 

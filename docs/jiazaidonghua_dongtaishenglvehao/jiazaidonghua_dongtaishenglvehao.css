@@ -22,7 +22,7 @@
   display: block;
   animation: loading 2s infinite step-start both;
   white-space: pre-wrap;
-  content: "...\A..\A.\A";
+  content: '...\A..\A.\A';
 }
 @keyframes loading {
   0% {

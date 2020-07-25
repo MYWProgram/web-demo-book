@@ -45,7 +45,7 @@ body {
   opacity: 0;
   border: 10px solid transparent;
   border-top-color: tomato;
-  content: "";
+  content: '';
 }
 .tooltip:hover::before,
 .tooltip:focus::before,

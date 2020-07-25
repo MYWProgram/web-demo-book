@@ -25,7 +25,7 @@ section:nth-child(3):after {
   opacity: 0;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   transition: 1s;
-  content: "";
+  content: '';
 }
 section:nth-child(3):hover {
   outline: none;

@@ -1,26 +1,24 @@
-const pinyin = require("pinyin");
-const glob = require("glob");
-const path = require("path");
+const pinyin = require('pinyin');
+const glob = require('glob');
+const path = require('path');
 const pinyinConfig = { style: pinyin.STYLE_NORMAL };
 // * 获取指定路径下的入口文件。
 function getEntries(globPath) {
   const files = glob.sync(globPath);
   const entries = {};
   files.forEach(function (filepath) {
-    const split = filepath.split("/");
+    const split = filepath.split('/');
     const name = split[split.length - 2];
-    entries[name] = "../" + filepath;
+    entries[name] = '../' + filepath;
   });
   return entries;
 }
 // * 根据路径生成文件名。
 function getName(path) {
-  const pathArr = path.split("src")[1].split("\\");
+  const pathArr = path.split('src')[1].split('\\');
   let pathName =
-    pinyin(pathArr[1], pinyinConfig).join("") +
-    "_" +
-    pinyin(pathArr[2], pinyinConfig).join("");
-  pathName = pathName.replace(/ /g, "_");
+    pinyin(pathArr[1], pinyinConfig).join('') + '_' + pinyin(pathArr[2], pinyinConfig).join('');
+  pathName = pathName.replace(/ /g, '_');
   return pathName;
 }
 // * 获取每一页的配置信息。
@@ -32,17 +30,17 @@ function getPageConfigs(entrieConfigs) {
     const config = require(entrieConfigs[key]);
     pagesConfig[key] = {};
     pagesConfig[key].pages = [];
-    pagesConfig[key].name = pinyin(key, pinyinConfig).join("");
+    pagesConfig[key].name = pinyin(key, pinyinConfig).join('');
     const paths = config.path;
     for (let pathNode of paths) {
-      const src = path.join(__dirname, "../src", key, pathNode.src, "index.js");
+      const src = path.join(__dirname, '../src', key, pathNode.src, 'index.js');
       const name = getName(src);
       entries[name] = src;
       pagesConfig[key].pages.push(
         Object.assign(pathNode, {
-          path: "/" + name,
+          path: '/' + name,
           type: key,
-          name,
+          name
         })
       );
     }
@@ -53,5 +51,5 @@ function getPageConfigs(entrieConfigs) {
 module.exports = {
   getEntries,
   getName,
-  getPageConfigs,
+  getPageConfigs
 };

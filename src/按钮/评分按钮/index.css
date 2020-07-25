@@ -27,7 +27,7 @@ body {
 .star-rating input::after {
   transition: all 300ms;
   color: tomato;
-  content: "☆";
+  content: '☆';
 }
 .star-rating input:hover {
   transform: scale(1.2);
@@ -36,6 +36,6 @@ body {
 .star-rating input:checked ~ input::after,
 .star-rating input:hover::after,
 .star-rating input:hover ~ input::after {
-  color: #1890FF;
-  content: "★";
+  color: #1890ff;
+  content: '★';
 }

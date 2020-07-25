@@ -11,7 +11,7 @@ body {
   height: 100px;
   width: 100px;
   background-image: linear-gradient(red, orange, yellow, lightgreen, blue, purple, red);
-  -webkit-mask: url("https://github.githubassets.com/pinned-octocat.svg");
-          mask: url("https://github.githubassets.com/pinned-octocat.svg");
+  -webkit-mask: url('https://github.githubassets.com/pinned-octocat.svg');
+          mask: url('https://github.githubassets.com/pinned-octocat.svg');
 }
 

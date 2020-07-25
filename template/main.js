@@ -1,12 +1,12 @@
-import "./static/css/main.less";
-import "./static/css/scroll.less";
-import "./static/icon/iconfont.css";
-import "./static/js/iframeLoading";
-import "./static/css/nprogress.css";
-import { pageChange, setNavItemClickEvent, clearPath } from "./static/js/page";
-import { setToggleEvent, setNavActive } from "./static/js/nav";
-import { setIframeLoadingEvent } from "./static/js/iframeLoading";
-import { initSearch } from "./static/js/search.js";
+import './static/css/main.less';
+import './static/css/scroll.less';
+import './static/icon/iconfont.css';
+import './static/js/iframeLoading';
+import './static/css/nprogress.css';
+import { pageChange, setNavItemClickEvent, clearPath } from './static/js/page';
+import { setToggleEvent, setNavActive } from './static/js/nav';
+import { setIframeLoadingEvent } from './static/js/iframeLoading';
+import { initSearch } from './static/js/search.js';
 
 // * 监听 hash 改变。
 window.onhashchange = () => {
@@ -32,7 +32,7 @@ $(document).ready(function () {
     setNavItemClickEvent();
     // * 设置目录的展开收起。
     setToggleEvent();
-  })
+  });
 });
 // * 设置 nav 活跃效果。
 function initActive() {

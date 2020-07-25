@@ -64,6 +64,6 @@ input:not(:focus):not(:placeholder-shown) + label {
   outline: none;
   background: none;
 }
-.row input[type="password"]:not(:placeholder-shown) ~ button {
+.row input[type='password']:not(:placeholder-shown) ~ button {
   display: inline-block;
 }

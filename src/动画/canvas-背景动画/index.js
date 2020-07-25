@@ -1,4 +1,4 @@
-import "./index.css";
+import './index.css';
 
 function normalPool(o) {
   var r = 0;
@@ -45,37 +45,32 @@ function createParticle(canvas) {
     r: 255,
     g: randomNormal({ mean: 125, dev: 20 }),
     b: 50,
-    a: rand(0, 1),
+    a: rand(0, 1)
   };
   return {
     x: -2,
     y: -2,
-    diameter: Math.max(
-      0,
-      randomNormal({ mean: PARTICLE_SIZE, dev: PARTICLE_SIZE / 2 })
-    ),
+    diameter: Math.max(0, randomNormal({ mean: PARTICLE_SIZE, dev: PARTICLE_SIZE / 2 })),
     duration: randomNormal({ mean: SPEED, dev: SPEED * 0.1 }),
     amplitude: randomNormal({ mean: 16, dev: 2 }),
     offsetY: randomNormal({ mean: 0, dev: 10 }),
     arc: Math.PI * 2,
     startTime: performance.now() - rand(0, SPEED),
-    colour: `rgba(${colour.r}, ${colour.g}, ${colour.b}, ${colour.a})`,
+    colour: `rgba(${colour.r}, ${colour.g}, ${colour.b}, ${colour.a})`
   };
 }
 // * 移动气泡。
 function moveParticle(particle, canvas, time) {
-  const progress =
-    ((time - particle.startTime) % particle.duration) / particle.duration;
+  const progress = ((time - particle.startTime) % particle.duration) / particle.duration;
   return {
     ...particle,
     x: progress,
-    y:
-      Math.sin(progress * particle.arc) * particle.amplitude + particle.offsetY,
+    y: Math.sin(progress * particle.arc) * particle.amplitude + particle.offsetY
   };
 }
 // * 绘制气泡。
 function drawParticle(particle, canvas, ctx) {
-  canvas = document.getElementById("particle-canvas");
+  canvas = document.getElementById('particle-canvas');
   const vh = canvas.height / 10;
   ctx.fillStyle = particle.colour;
   ctx.beginPath();
@@ -107,14 +102,14 @@ function draw(time, canvas, ctx) {
 }
 // * 初始化 canvas。
 function initializeCanvas() {
-  let canvas = document.getElementById("particle-canvas");
+  let canvas = document.getElementById('particle-canvas');
   canvas.width = canvas.offsetWidth * window.devicePixelRatio;
   canvas.height = canvas.offsetHeight * window.devicePixelRatio;
-  let ctx = canvas.getContext("2d");
-  window.addEventListener("resize", () => {
+  let ctx = canvas.getContext('2d');
+  window.addEventListener('resize', () => {
     canvas.width = canvas.offsetWidth * window.devicePixelRatio;
     canvas.height = canvas.offsetHeight * window.devicePixelRatio;
-    ctx = canvas.getContext("2d");
+    ctx = canvas.getContext('2d');
   });
   return [canvas, ctx];
 }
@@ -129,10 +124,10 @@ function startAnimation() {
 }
 // * 页面加载完成绘制背景。
 (function () {
-  if (document.readystate !== "loading") {
+  if (document.readystate !== 'loading') {
     startAnimation();
   } else {
-    document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener('DOMContentLoaded', () => {
       startAnimation();
     });
   }

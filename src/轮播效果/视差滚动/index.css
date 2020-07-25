@@ -17,11 +17,11 @@ ul {
   text-align: center;
   line-height: 300px;
   color: tomato;
-  background-image: linear-gradient( 135deg, #3C8CE7 10%, #00EAFF 100%);
+  background-image: linear-gradient(135deg, #3c8ce7 10%, #00eaff 100%);
 }
 .parallax-scrolling {
   height: 1000px;
-  background-image: url("https://picsum.photos/1920/1080?random=1");
+  background-image: url('https://picsum.photos/1920/1080?random=1');
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;

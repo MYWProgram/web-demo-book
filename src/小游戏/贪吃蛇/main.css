@@ -1,8 +1,9 @@
-body,html{
+body,
+html {
   width: 98%;
-  height: 98%;  
+  height: 98%;
 }
-.wrap{
+.wrap {
   width: 100%;
   height: 100%;
   display: flex;
@@ -10,7 +11,7 @@ body,html{
   justify-content: center;
   align-items: center;
 }
-.header{
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,7 +19,7 @@ body,html{
   height: 60px;
 }
 button {
-  background-color: #4CAF50; /* Green */
+  background-color: #4caf50; /* Green */
   border: none;
   color: white;
   padding: 5px 15px;

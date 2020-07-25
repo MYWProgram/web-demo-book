@@ -1,8 +1,8 @@
-import "./index.css";
+import './index.css';
 
-let imgs = document.querySelectorAll("img");
+let imgs = document.querySelectorAll('img');
 Array.from(imgs).forEach((img, index) => {
-  let src = img.getAttribute("src");
+  let src = img.getAttribute('src');
   let image = new Image();
   image.src = src;
   let width = 360;

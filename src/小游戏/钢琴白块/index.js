@@ -1,4 +1,4 @@
-import "./main.css";
+import './main.css';
 
 var clock = null;
 var state = 0;
@@ -8,25 +8,25 @@ function init() {
   for (var i = 0; i < 4; i++) {
     crow();
   }
-  $("main").onclick = function (ev) {
+  $('main').onclick = function (ev) {
     judge(ev);
   };
 }
 
-$("anniu").onclick = function () {
+$('anniu').onclick = function () {
   start();
 };
 
 function judge(ev) {
   if (state == 3) {
-    alert("fuckyou!!不要再戳我了！");
+    alert('fuckyou!!不要再戳我了！');
   } else {
-    if (ev.target.className.indexOf("black") == -1) {
+    if (ev.target.className.indexOf('black') == -1) {
       clearInterval(clock);
       state = 3;
-      alert("结束");
+      alert('结束');
     } else {
-      ev.target.className = "cell";
+      ev.target.className = 'cell';
       ev.target.parentNode.pass = 1;
       score();
     }
@@ -38,27 +38,27 @@ function speed() {}
 
 function move() {
   speed();
-  var con = $("container");
-  var top = parseInt(window.getComputedStyle(con, null)["top"]);
+  var con = $('container');
+  var top = parseInt(window.getComputedStyle(con, null)['top']);
   top += 5;
-  con.style.top = top + "px";
+  con.style.top = top + 'px';
   if (top == 0) {
     crow();
-    con.style.top = -150 + "px";
+    con.style.top = -150 + 'px';
     drow();
   } else if (top == -95) {
     var rows = con.children;
     if (rows.length == 5 && rows[rows.length - 1].pass != 1) {
       clearInterval(clock);
       state = 3;
-      alert("你挂了！");
+      alert('你挂了！');
     }
   }
 }
 
 function score() {
-  $("score").innerHTML = parseInt($("score").innerHTML) + 1;
-  scoress = parseInt($("score").innerHTML) + 1;
+  $('score').innerHTML = parseInt($('score').innerHTML) + 1;
+  scoress = parseInt($('score').innerHTML) + 1;
 }
 
 function start() {
@@ -66,9 +66,9 @@ function start() {
 }
 
 function crow() {
-  var row = cdiv("row");
+  var row = cdiv('row');
   var classes = creatSn();
-  var con = $("container");
+  var con = $('container');
   for (var i = 0; i < 4; i++) {
     row.appendChild(cdiv(classes[i]));
   }
@@ -80,7 +80,7 @@ function crow() {
 }
 
 function drow() {
-  var con = $("container");
+  var con = $('container');
   if (con.children.length == 6) {
     con.removeChild(con.lastChild);
   }
@@ -88,7 +88,7 @@ function drow() {
 
 //创建div，其class为className
 function cdiv(className) {
-  var div = document.createElement("div");
+  var div = document.createElement('div');
   div.className = className;
   return div;
 }
@@ -100,9 +100,9 @@ function $(id) {
 }
 
 function creatSn() {
-  var Arr = ["cell", "cell", "cell", "cell"];
+  var Arr = ['cell', 'cell', 'cell', 'cell'];
   var i = (Math.random() * 4) | 0;
-  Arr[i] = "cell black";
+  Arr[i] = 'cell black';
   return Arr;
 }
 

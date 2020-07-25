@@ -32,7 +32,7 @@ h1 {
   width: 5px;
   height: 100%;
   background-color: deeppink;
-  content: "";
+  content: '';
 }
 /* 方案三，box-shadow 实现；又分为外阴影和内阴影。 */
 .box-shadow {

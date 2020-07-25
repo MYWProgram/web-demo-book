@@ -32,7 +32,7 @@ body {
   text-align: center;
 }
 .text-wrapper article p::before {
-  content: "\2003\2003";
+  content: '\2003\2003';
 }
 #fullScreen,
 #exitFullScreen {

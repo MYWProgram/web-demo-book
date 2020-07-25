@@ -24,9 +24,10 @@ body {
   text-align: center;
 }
 .text-wrapper article p::before {
-  content: "\2003\2003";
+  content: '\2003\2003';
 }
-#fullScreen, #exitFullScreen {
+#fullScreen,
+#exitFullScreen {
   outline: none;
   border: none;
   background-color: tomato;

@@ -29,7 +29,7 @@ ul {
   bottom: 0;
   border-radius: 100%;
   background-color: transparent;
-  content: "";
+  content: '';
   transform: scale3d(0.1, 0.1, 1);
   transition: all 500ms ease-in;
 }

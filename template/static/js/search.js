@@ -1,4 +1,4 @@
-import { template, cloneDeep } from "lodash";
+import { template, cloneDeep } from 'lodash';
 
 var tpl = `
 <div class="list-group">
@@ -18,12 +18,12 @@ var tpl = `
 </div>
 `;
 
-export const initSearch = (callback) => {
-  document.querySelector("#basic-addon1").onclick = () => {
+export const initSearch = callback => {
+  document.querySelector('#basic-addon1').onclick = () => {
     handleSearch();
     callback();
   };
-  document.querySelector("#search-input").onkeyup = (event) => {
+  document.querySelector('#search-input').onkeyup = event => {
     if (event.keyCode == 13) {
       handleSearch();
       callback();
@@ -32,12 +32,12 @@ export const initSearch = (callback) => {
 };
 
 const handleSearch = () => {
-  let input = document.querySelector("#search-input");
+  let input = document.querySelector('#search-input');
   let value = input.value;
   let pages = cloneDeep(pagesConfig);
   let result = search(pages, value);
   var compiled = template(tpl);
-  $("#menu").html(compiled({ result }));
+  $('#menu').html(compiled({ result }));
 };
 
 const search = (pages, value) => {
@@ -50,7 +50,7 @@ const search = (pages, value) => {
     }
     // * 父层没有就找子集。
     let pageArr = [];
-    pages[folderName].pages.forEach((item) => {
+    pages[folderName].pages.forEach(item => {
       if (item.title.indexOf(value) !== -1) {
         pageArr.push(item);
       }
