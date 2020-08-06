@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+}
+html,
+body {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  text-align: center;
+  background-color: #664aff;
+}
+.range {
+  height: 80px;
+  width: 380px;
+  padding: 0 65px 0 45px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.sliderValue {
+  position: relative;
+  width: 100%;
+}
+.sliderValue span {
+  position: absolute;
+  top: -28px;
+  left: 41.5%;
+  width: 45px;
+  height: 45px;
+  font-weight: 500;
+  line-height: 45px;
+  color: #fff;
+  transform-origin: bottom;
+  transition: transform 0.3s ease-in-out;
+  z-index: 2;
+}
+.sliderValue span:after {
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background-color: #664aff;
+  border-radius: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  z-index: -1;
+  content: '';
+  /* 水滴指针样式。 */
+  /* border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%; */
+}
+.field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.field .value {
+  position: absolute;
+  font-size: 18px;
+  font-weight: 600;
+  color: #664aff;
+}
+.field .value.left {
+  left: -22px;
+}
+.field .value.right {
+  right: -43px;
+}
+.range input {
+  width: 100%;
+  height: 3px;
+  background-color: silver;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  z-index: 2222;
+  -webkit-appearance: none;
+}
+.range input::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: #664aff;
+  border: 1px solid #664aff;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+.range input::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: #664aff;
+  border: 1px solid #664aff;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+/* 适配火狐浏览器进度条。 */
+.range input::-moz-range-progress {
+  background-color: #664aff;
+}
