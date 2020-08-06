@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+  -webkit-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+body {
+  background-color: #18191a;
+  overflow: hidden;
+}
+nav {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+nav .drop-btn {
+  width: 400px;
+  padding: 0 20px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 55px;
+  color: #b0b3b8;
+  background-color: #242526;
+  border-radius: 5px;
+}
+nav .drop-btn span {
+  float: right;
+  font-size: 28px;
+  line-height: 50px;
+  cursor: pointer;
+}
+nav .tooltip {
+  position: absolute;
+  right: 20px;
+  bottom: -20px;
+  display: none;
+  width: 15px;
+  height: 15px;
+  background-color: #242526;
+  transform: rotate(45deg);
+}
+nav .tooltip.show {
+  display: block;
+}
+nav .wrapper {
+  position: absolute;
+  top: 65px;
+  display: flex;
+  display: none;
+  width: 400px;
+  background-color: #242526;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+nav .wrapper.show {
+  display: block;
+  display: flex;
+}
+.wrapper ul {
+  width: 400px;
+  padding: 10px;
+  list-style: none;
+  transition: all 0.5s ease;
+}
+.wrapper ul li {
+  line-height: 55px;
+}
+.wrapper ul li a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #b0b3b8;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.wrapper ul li:hover a {
+  background: #3a3b3c;
+}
+ul li a .icon {
+  display: flex;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 13px;
+  text-align: center;
+  background-color: #ffffff1a;
+  border-radius: 50%;
+}
+ul li a .icon span {
+  font-size: 20px;
+  line-height: 40px;
+  color: #b0b3b8;
+}
+ul li a i {
+  position: absolute;
+  right: 10px;
+  font-size: 25px;
+  pointer-events: none;
+}
+.wrapper ul.setting-drop,
+.wrapper ul.help-drop {
+  display: none;
+}
+.wrapper .arrow {
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #b0b3b8;
+  cursor: pointer;
+}
+.wrapper .arrow span {
+  margin-right: 15px;
+}
+
