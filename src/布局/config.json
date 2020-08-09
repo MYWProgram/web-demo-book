@@ -19,6 +19,10 @@
     {
       "title": "Flex-列等分自适应布局",
       "src": "./Flex-列等分自适应布局"
+    },
+    {
+      "title": "响应式 footer",
+      "src": "./响应式 footer"
     }
   ]
 }

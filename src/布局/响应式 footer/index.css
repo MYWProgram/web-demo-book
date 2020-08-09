@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+  color: #d9d9d9;
+}
+.content1 {
+  position: relative;
+  margin: 130px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+.content1 .text {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #202020;
+}
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background-color: #111111;
+}
+.main-content {
+  display: flex;
+}
+.main-content .box {
+  flex-basis: 50%;
+  padding: 10px 20px;
+}
+.box h2 {
+  position: relative;
+  display: inline-block;
+  /* 设置宽度由文本撑开。 */
+  width: fix-content;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  user-select: none;
+}
+.box h2::after {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #f12020;
+  content: '';
+}
+.box .content {
+  position: relative;
+  margin: 20px 0 0 0;
+}
+.left .content p {
+  text-align: justify;
+}
+.left .content .social {
+  margin: 20px 0 0 0;
+}
+.left .content .social a {
+  padding: 0 2px;
+}
+.left .content .social a span {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 40px;
+  background-color: #1a1a1a;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.left .content .social a span:hover {
+  background-color: #f12020;
+}
+.center .content .fas {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  font-size: 1.4375rem;
+  text-align: center;
+  line-height: 45px;
+  background-color: #1a1a1a;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.center .content .fas:hover {
+  background-color: #f12020;
+}
+.center .content .text {
+  padding-left: 10px;
+  font-size: 1.0625rem;
+  font-weight: 500;
+}
+.center .content .phone {
+  margin: 15px 0;
+}
+.right form .text {
+  margin-bottom: 2px;
+  font-size: 1.0625rem;
+  color: #656565;
+}
+.right form .msg {
+  margin-top: 10px;
+}
+.right form input,
+.right form #msgForm {
+  width: 100%;
+  font-size: 1.0625rem;
+  background-color: #151515;
+  border: 1px solid #656565;
+  resize: none;
+}
+.right form input {
+  padding-left: 10px;
+}
+.right form #msgForm {
+  padding: 5px 0 0 10px;
+}
+.right form input:focus,
+.right form #msgForm:focus {
+  border: 1px solid #f12020;
+  outline: none;
+}
+.right form input {
+  height: 35px;
+}
+.right form .btn {
+  margin-top: 10px;
+}
+.right form .btn button {
+  width: 100%;
+  height: 40px;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  background-color : #f12020;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.right form .btn button:hover {
+  background-color: #000000;
+}
+@media screen and (max-width: 900px) {
+  footer {
+    position: relative;
+    bottom: 0px;
+  }
+  .main-content {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .main-content .box {
+    margin: 5px 0;
+  }
+}
