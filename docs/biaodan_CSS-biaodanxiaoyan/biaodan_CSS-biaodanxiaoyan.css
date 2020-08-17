@@ -84,14 +84,21 @@ body {
 }
 .submit-button {
   float: right;
+  width: 72px;
+  height: 28px;
   margin-top: 10px;
   outline: none;
   border: none;
+  border-radius: 8px;
   color: #ffffff;
-  background-color: tomato;
+  background-color: #3c9;
   cursor: pointer;
   -webkit-user-select: none;
+     -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+.submit-button:active {
+  transform: scale(0.92);
 }
 

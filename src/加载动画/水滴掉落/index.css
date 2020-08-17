@@ -7,14 +7,14 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #000;
+  background-color: #000000;
   filter: contrast(30);
 }
 .drop {
   position: absolute;
   width: 100px;
   height: 100px;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 50%;
   filter: blur(20px);
   opacity: 0;
@@ -29,7 +29,7 @@ body {
 .collection {
   width: 100px;
   height: 100px;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 50%;
   /* 使用 filter: blur 来模拟水滴。 */
   filter: blur(20px);

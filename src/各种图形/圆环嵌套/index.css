@@ -11,7 +11,7 @@
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background-color: orange;
+  background-color: #000000;
   opacity: 0.42;
 }
 .circle-inside_demo1 {
@@ -21,7 +21,7 @@
   top: 25px;
   left: 25px;
   border-radius: 50%;
-  background-color: lightgreen;
+  background-color: #ffffff;
 }
 .circle-inside_demo1::after {
   content: '';
@@ -31,15 +31,15 @@
   top: 25px;
   left: 25px;
   border-radius: 50%;
-  background-color: blue;
+  background-color: silver;
 }
 /* 2 */
 .circle-wrapper_demo2 {
   width: 100px;
   height: 100px;
-  border: 25px solid lightgreen;
+  border: 25px solid #000000;
   border-radius: 50%;
-  background-color: lightcoral;
+  background-color: #ffffff;
 }
 .circle-wrapper_demo2::after {
   width: 50px;
@@ -50,21 +50,20 @@
   top: 25px;
   left: 25px;
   border-radius: 50%;
-  background-color: black;
+  background-color: silver;
 }
 /* 3 */
 .circle-wrapper_demo3 {
   width: 150px;
   height: 150px;
-  box-shadow: 0 0 0 37.5px red inset;
+  box-shadow: 0 0 0 37.5px #000000 inset;
   border-radius: 50%;
-  background-color: skyblue;
+  background-color: silver;
 }
 /* 4 */
 .circle-wrapper_demo4 {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  /* background: -webkit-radial-gradient(circle closest-side, lightgreen 50%, lightblue 50%); */
-  background: radial-gradient(circle closest-side, lightgreen 50%, lightblue 50%);
+  background: radial-gradient(circle closest-side, silver 50%, #000000 50%);
 }

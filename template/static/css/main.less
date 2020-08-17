@@ -1,10 +1,9 @@
 .theme1 {
-  @backgroundColor: #101B2D;
-  @navItemDefaultColor: #9099A3;
+  @backgroundColor: #242831;
+  @navItemDefaultColor: #9099a3;
   @navItemActiveColor: #ffffff;
-  @navItemActiveBackGround: rgba(179, 212, 252, .3);
-  @navItemHoverBackGround: #36445e;
-  @titleBackground: #ffffff;
+  @navItemActiveBackGround: #db305a;
+  @titleBackground: #db305a;
 }
 .ellipsis {
   overflow: hidden;
@@ -19,31 +18,31 @@
 html,
 body,
 .app {
+  display: flex;
   width: 100%;
   height: 100%;
-  font-family: Roboto, sans-serif;
-  display: flex;
+  font-family: Helvetica;
 }
 .app > .left {
-  height: 100%;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   width: 250px;
+  height: 100%;
   background-color: @backgroundColor;
+  overflow: hidden;
   #menu {
     flex: 1;
     overflow-y: overlay;
   }
   .title {
+    font-weight: lighter;
     text-align: center;
     line-height: 60px;
-    font-weight: lighter;
     color: @titleBackground;
   }
   .search {
-    padding: 10px;
     position: relative;
+    padding: 10px;
     .input-group-addon {
       cursor: pointer;
     }
@@ -51,23 +50,21 @@ body,
   .list-block {
     display: flex;
     height: 40px;
-    line-height: 40px;
     margin: 0 10px;
     padding: 0 10px;
-    border-radius: 5px;
-    margin-bottom: 1px;
-    cursor: pointer;
     text-decoration: none;
+    line-height: 40px;
     color: @navItemDefaultColor;
+    cursor: pointer;
     &:hover {
-      background-color: @navItemHoverBackGround;
+      transform: scale(1.05);
     }
   }
   .list-header {
     font-weight: 600;
     & > span:nth-child(1) {
-      transition: all 0.1s;
       display: inline-block;
+      transition: all 0.1s;
       .ellipsis();
     }
     & > span:nth-child(2) {
@@ -97,12 +94,8 @@ body,
     color: @navItemActiveColor;
   }
   .list-item-active {
+    font-weight: 700;
     background-color: @navItemActiveBackGround;
-    font-weight: 500;
-    &:hover {
-      font-weight: 500;
-      background-color: @navItemActiveBackGround;
-    }
   }
 }
 .app > .right {

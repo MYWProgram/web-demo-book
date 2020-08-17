@@ -7,7 +7,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #000;
+  background-color: #000000;
   -webkit-filter: contrast(30);
           filter: contrast(30);
 }
@@ -15,7 +15,7 @@ body {
   position: absolute;
   width: 100px;
   height: 100px;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 50%;
   -webkit-filter: blur(20px);
           filter: blur(20px);
@@ -31,7 +31,7 @@ body {
 .collection {
   width: 100px;
   height: 100px;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 50%;
   /* 使用 filter: blur 来模拟水滴。 */
   -webkit-filter: blur(20px);
