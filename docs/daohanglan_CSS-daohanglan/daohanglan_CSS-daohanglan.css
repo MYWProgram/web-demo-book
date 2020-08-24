@@ -16,7 +16,6 @@ label {
   color: #ffffff;
   background-color: #2980b9;
   -webkit-user-select: none;
-     -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;

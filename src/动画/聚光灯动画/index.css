@@ -7,20 +7,18 @@ body {
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #111;
+  background-color: #000000;
 }
-h1,
-h2 {
+h1 {
   position: relative;
   margin: 0;
   padding: 0;
   font-size: 8rem;
   font-family: Helvetica;
-  color: #444;
+  color: #444444;
   letter-spacing: -0.3rem;
 }
-h1::after,
-h2::after {
+h1::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -38,9 +36,6 @@ h2::after {
 h1::after {
   animation: spotlight-smooth 6s infinite;
 }
-h2::after {
-  animation: spotlight-breakpoint 6s infinite;
-}
 @keyframes spotlight-smooth {
   0% {
     -webkit-clip-path: ellipse(100px 100px at 0% 50%);
@@ -49,36 +44,6 @@ h2::after {
   50% {
     -webkit-clip-path: ellipse(100px 100px at 100% 50%);
     clip-path: ellipse(100px 100px at 100% 50%);
-  }
-  100% {
-    -webkit-clip-path: ellipse(100px 100px at 0% 50%);
-    clip-path: ellipse(100px 100px at 0% 50%);
-  }
-}
-@keyframes spotlight-breakpoint {
-  0% {
-    -webkit-clip-path: ellipse(100px 100px at 0% 50%);
-    clip-path: ellipse(100px 100px at 0% 50%);
-  }
-  20% {
-    -webkit-clip-path: ellipse(100px 100px at 33% 50%);
-    clip-path: ellipse(100px 100px at 33% 50%);
-  }
-  40% {
-    -webkit-clip-path: ellipse(100px 100px at 66% 50%);
-    clip-path: ellipse(100px 100px at 66% 50%);
-  }
-  50% {
-    -webkit-clip-path: ellipse(100px 100px at 100% 50%);
-    clip-path: ellipse(100px 100px at 100% 50%);
-  }
-  60% {
-    -webkit-clip-path: ellipse(100px 100px at 66% 50%);
-    clip-path: ellipse(100px 100px at 66% 50%);
-  }
-  80% {
-    -webkit-clip-path: ellipse(100px 100px at 33% 50%);
-    clip-path: ellipse(100px 100px at 33% 50%);
   }
   100% {
     -webkit-clip-path: ellipse(100px 100px at 0% 50%);

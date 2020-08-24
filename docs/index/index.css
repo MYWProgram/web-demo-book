@@ -80,7 +80,6 @@ body,
   display: block;
   padding-left: 20px;
   -webkit-user-select: none;
-     -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   transition: all 0.1s;

@@ -16,7 +16,6 @@ body {
   color: #f27059;
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
@@ -118,7 +117,6 @@ body {
   background: linear-gradient(0, #f27059 2px, #f27059 2px) no-repeat left top / 0 2px, linear-gradient(-90deg, #f27059 2px, #f27059 2px) no-repeat right top / 2px 0, linear-gradient(-180deg, #f27059 2px, #f27059 2px) no-repeat right bottom / 0 2px, linear-gradient(-270deg, #f27059 2px, #f27059 2px) no-repeat left bottom / 2px 0;
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
