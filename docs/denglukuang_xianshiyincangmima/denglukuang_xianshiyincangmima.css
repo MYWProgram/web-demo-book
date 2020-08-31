@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+}
+html,
+body {
+  display: grid;
+  height: 100%;
+  place-items: center;
+}
+.wrapper {
+  position: relative;
+  width: 320px;
+  height: 55px;
+  border-radius: 5px;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+}
+.wrapper input {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #8e44ad;
+  padding-left: 15px;
+  font-size: 18px;
+  border-radius: 5px;
+  outline: none;
+}
+.wrapper input::-webkit-input-placeholder {
+  font-size: 16px;
+}
+.wrapper input:-ms-input-placeholder {
+  font-size: 16px;
+}
+.wrapper input::-ms-input-placeholder {
+  font-size: 16px;
+}
+.wrapper input::placeholder {
+  font-size: 16px;
+}
+.wrapper span {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  display: none;
+  font-size: 20px;
+  color: #8e44ad;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.wrapper input:not(:-ms-input-placeholder) + span {
+  display: inline-block;
+}
+.wrapper input:not(:placeholder-shown) + span {
+  display: inline-block;
+}
+.wrapper input[type="text"] + span > .close-password {
+  display: inline;
+}
+.wrapper input[type="text"] + span > .show-password {
+  display: none;
+}
+.wrapper input[type="password"] + span > .close-password {
+  display: none;
+}
+.wrapper input[type="password"] + span > .show-password {
+  display: inline;
+}
+
