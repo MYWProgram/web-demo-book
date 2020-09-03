@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+.center {
+  position: relative;
+  width: 770px;
+  left: -70px;
+  perspective: 1200px;
+}
+.center .img-card {
+  position: relative;
+  width: 400px;
+  height: 350px;
+  /* 将图片展示区域放在 3D 空间中。 */
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-in;
+}
+.img-card img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.img-card img:nth-child(1) {
+  transform: rotateX(-270deg) translateY(-175px);
+  /* 设置元素 transform 原点。 */
+  transform-origin: top left;
+}
+.img-card img:nth-child(2) {
+  transform: translateZ(175px);
+}
+.img-card img:nth-child(3) {
+  transform: rotateX(-90deg) translateY(175px);
+  transform-origin: bottom center;
+}
+.img-card img:nth-child(4) {
+  transform: rotateX(-180deg) translateY(350px) translateZ(175px);
+  transform-origin: bottom right;
+}
+#tab-1:checked ~ .img-card {
+  transform: rotateX(-90deg);
+}
+#tab-2:checked ~ .img-card {
+  transform: rotateX(0deg);
+}
+#tab-3:checked ~ .img-card {
+  transform: rotateX(90deg);
+}
+#tab-4:checked ~ .img-card {
+  transform: rotateX(180deg);
+}
+.sliders {
+  position: absolute;
+  top: -30px;
+  right: 0;
+}
+.sliders label {
+  display: flex;
+  width: 110px;
+  height: 98px;
+  margin: 6px 0;
+  border: 1px solid #2d4052;
+  overflow: hidden;
+  cursor: pointer;
+}
+.sliders label:nth-child(1) {
+  margin-top: 0;
+}
+label img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* 未展示的图片灰度设置。 */
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  opacity: 0.9;
+}
+label img:hover,
+#tab-1:checked ~ .sliders label:nth-child(1) img,
+#tab-2:checked ~ .sliders label:nth-child(2) img,
+#tab-3:checked ~ .sliders label:nth-child(3) img,
+#tab-4:checked ~ .sliders label:nth-child(4) img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  opacity: 1;
+}
+input {
+  display: none;
+}
+

@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Helvetica;
+  background-image: linear-gradient(147deg, #f6b323 0%, #f23b26 74%);
+}
+.blog-card {
+  position: absolute;
+  width: 95%;
+  max-width: 850px;
+  height: 370px;
+  border-radius: 25px;
+  background: #fff;
+  box-shadow: 0px 10px 50px rgba(252, 56, 56, 0.3);
+}
+.inner-part {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 360px;
+  padding: 0 25px;
+}
+#imgTap:checked ~ .inner-part {
+  padding: 0;
+  transition: 0.1s ease-in;
+}
+.inner-part .img {
+  flex-shrink: 0;
+  width: 260px;
+  height: 260px;
+  border-radius: 20px;
+  box-shadow: 2px 3px 15px rgba(252, 56, 56, 0.1);
+  overflow: hidden;
+}
+#imgTap:checked ~ .inner-part .img {
+  width: 850px;
+  height: 370px;
+  margin-top: 10px;
+  transition: 0.3s 0.2s ease-in;
+  z-index: 99;
+}
+.img img {
+  width: 100%;
+  height: 100%;
+  transition: 0.6s;
+  object-fit: cover;
+  opacity: 0;
+  cursor: pointer;
+}
+#tap-1:checked ~ .inner-part .img-1,
+#tap-2:checked ~ .inner-part .img-2,
+#tap-3:checked ~ .inner-part .img-3 {
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+.content {
+  width: 530px;
+  margin-left: 50px;
+  padding: 0 20px;
+  transition: 0.6s;
+  opacity: 0;
+}
+/* 点击图片进行放大，隐藏旁边的内容区域。 */
+#imgTap:checked ~ .inner-part .content {
+  display: none;
+}
+/* 点击下面的单选切换对应内容显示。 */
+#tap-1:checked ~ .inner-part .content-1,
+#tap-2:checked ~ .inner-part .content-2,
+#tap-3:checked ~ .inner-part .content-3 {
+  margin-left: 0px;
+  transition-delay: 0.3s;
+  opacity: 1;
+  z-index: 100;
+}
+.content span {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #7b7992;
+}
+.content .title {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #0d0925;
+}
+.content .text {
+  margin-bottom: 30px;
+  font-size: 19px;
+  color: #4e4a67;
+  text-align: justify;
+  line-height: 1.5em;
+}
+.content button {
+  display: inline-flex;
+  padding: 15px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff0e6;
+  background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
+  border: none;
+  border: 1px solid #fd3535;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+}
+.content button:hover {
+  transform: scale(0.98);
+  background-image: linear-gradient(147deg, #fe791b 0%, #fd1c1c 74%);
+}
+.content button:active {
+  transform: scale(1);
+}
+.sliders {
+  position: absolute;
+  bottom: 25px;
+  left: 65%;
+  transform: translateX(-50%);
+  z-index: 12;
+}
+#imgTap:checked ~ .sliders {
+  display: none;
+}
+.sliders .tap {
+  display: inline-flex;
+  position: relative;
+  width: 50px;
+  height: 10px;
+  margin: 0 3px;
+  background-color: #d9d9d9;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.sliders .tap:hover {
+  background: #ccc;
+}
+.sliders .tap:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: -100%;
+  height: 100%;
+  background-image: linear-gradient(147deg, #f6b323 0%, #f23b26 74%);
+  border-radius: 10px;
+  transform: scaleX(0);
+  /* 设置元素动画原点，案例中点击切换滑块由左至右填充颜色。 */
+  transform-origin: left;
+  transition: transform 0.6s;
+  content: '';
+}
+input[type='radio'],
+input[type='checkbox'] {
+  display: none;
+}
+#tap-1:checked ~ .sliders .tap-1:before,
+#tap-2:checked ~ .sliders .tap-2:before,
+#tap-3:checked ~ .sliders .tap-3:before {
+  transform: scaleX(1);
+  width: 100%;
+}
