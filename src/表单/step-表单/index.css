@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: Helvetica;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #0250c5;
+  overflow: hidden;
+}
+::selection {
+  color: #fff;
+  background: #d43f8d;
+}
+.container {
+  width: 330px;
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.container header {
+  font-size: 28px;
+  font-weight: 600;
+}
+.container .form-outer {
+  width: 100%;
+  overflow: hidden;
+}
+/* 横向排列 form 并设置宽度装下所有的 form. */
+.container .form-outer form {
+  display: flex;
+  width: 400%;
+}
+.form-outer form .page {
+  width: 25%;
+  transition: margin-left 0.3s ease-in-out;
+}
+.form-outer form .page .title {
+  font-size: 24px;
+  font-weight: 500;
+  text-align: left;
+}
+.form-outer form .page .field {
+  display: flex;
+  flex-direction: column;
+  width: 330px;
+  height: 80px;
+  margin-top: 12px;
+}
+form .page .field .label {
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+}
+form .page .field input {
+  height: 40px;
+  padding-left: 12px;
+  font-size: 16px;
+  border: 1px solid silver;
+  border-radius: 5px;
+}
+form .page .field input:focus {
+  border-color: #d33f8d;
+}
+form .page .field select {
+  height: 40px;
+  padding-left: 12px;
+  font-size: 16px;
+  font-weight: 500;
+}
+form .page .field button {
+  width: 100%;
+  height: 46px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #d33f8d;
+  border: none;
+  border-radius: 5px;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+form .page .field button:hover {
+  background-color: #0250c5;
+}
+form .page .btns {
+  flex-direction: row !important;
+}
+form .page .btns button.prev {
+  margin-right: 3px;
+}
+form .page .btns button.next {
+  margin-left: 3px;
+}
+.container .progress-bar {
+  display: flex;
+  margin: 20px 0;
+  user-select: none;
+}
+.container .progress-bar .step {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+.container .progress-bar .step p {
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+.progress-bar .step .bullet {
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+.progress-bar .step .bullet.active {
+  background-color: #d43f8d;
+  border-color: #d43f8d;
+}
+.progress-bar .step .bullet.active span {
+  display: none;
+}
+.progress-bar .step .bullet:before,
+.progress-bar .step .bullet:after {
+  position: absolute;
+  right: -51px;
+  bottom: 11px;
+  width: 44px;
+  height: 2px;
+  background-color: #333;
+  content: '';
+}
+.progress-bar .step .bullet.active:after {
+  background-color: #d43f8d;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 0.3s linear forwards;
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.progress-bar .step:last-child .bullet:before,
+.progress-bar .step:last-child .bullet:after {
+  display: none;
+}
+.progress-bar .step p.active {
+  color: #d43f8d;
+  transition: 0.2s linear;
+}
+.progress-bar .step .check {
+  position: absolute;
+  top: 66%;
+  left: 50%;
+  display: none;
+  font-size: 14px;
+  transform: translate(-50%, -50%);
+}
+.progress-bar .step .check.active {
+  display: block;
+  color: #fff;
+}
