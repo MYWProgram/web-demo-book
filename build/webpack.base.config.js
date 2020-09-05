@@ -103,6 +103,7 @@ module.exports = {
         //   removeAttributeQuotes: false,
         //   collapseWhitespace: false
         // },
+        // ! 关闭 HtmlWebpackPlugin 针对单个文件 Demo 文件打包时的 minify 设置，导致图片部分加载失败的 Bug.
         minify: false,
         chunks: [name]
       });
