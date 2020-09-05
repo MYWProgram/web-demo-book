@@ -1,10 +1,10 @@
 import './index.css';
 
 let startX, startWidth;
-startWidth = localStorage.getItem('scalable_width') || getScalableDivWidth();
 const getScalableDivWidth = () => {
   return parseInt(window.getComputedStyle(document.querySelector('.scalable')).width, 10);
 };
+startWidth = localStorage.getItem('scalable_width') || getScalableDivWidth();
 const onDrag = e => {
   let newWidth = startWidth + e.clientX - startX;
   document.querySelector('.scalable').style.width = newWidth + 'px';
