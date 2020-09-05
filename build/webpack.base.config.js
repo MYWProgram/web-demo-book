@@ -99,10 +99,11 @@ module.exports = {
       return new HtmlWebpackPlugin({
         template: entries[name].slice(0, -8) + 'index.html',
         filename: name + '/index.html',
-        minify: {
-          removeAttributeQuotes: false,
-          collapseWhitespace: false
-        },
+        // minify: {
+        //   removeAttributeQuotes: false,
+        //   collapseWhitespace: false
+        // },
+        minify: false,
         chunks: [name]
       });
     }),
