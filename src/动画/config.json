@@ -13,24 +13,12 @@
       "src": "./聚光灯动画"
     },
     {
-      "title": "mousemove-手电筒",
-      "src": "./mousemove-手电筒"
-    },
-    {
       "title": "canvas-背景动画",
       "src": "./canvas-背景动画"
     },
     {
-      "title": "mousemove-背景动画",
-      "src": "./mousemove-背景动画"
-    },
-    {
       "title": "mousein-头像旋转",
       "src": "./mousein-头像旋转"
-    },
-    {
-      "title": "mousemove-视频预览动画",
-      "src": "./mousemove-视频预览动画"
     }
   ]
 }

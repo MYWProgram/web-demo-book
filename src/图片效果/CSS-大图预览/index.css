@@ -1,6 +1,16 @@
-.wrapper {
+/* .wrapper {
   width: 250px;
   margin: 30px auto;
+} */
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+.wrapper .pre-box img {
+  display: inline-block;
+  width: 180px;
+  height: 84px;
 }
 .img-box {
   display: none;
@@ -10,12 +20,11 @@
   bottom: 0;
   left: 0;
   text-align: center;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 999;
 }
+/* :target 代表一个唯一的页面元素(目标元素)，其 id 与当前 URL 片段匹配。 */
 .img-box:target {
-  display: block;
-}
-.img-box img {
-  margin-top: 100px;
+  display: grid;
+  place-items: center;
 }

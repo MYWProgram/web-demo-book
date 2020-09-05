@@ -1,14 +1,17 @@
+body {
+  display: grid;
+  place-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+}
 .masonry {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  -webkit-column-gap: 5px;
-          column-gap: 5px;
-  grid-auto-rows: 10px;
+  grid-template-columns: repeat(3, 360px);
+  gap: 0 5px;
 }
 .item {
-  grid-row-start: auto;
   position: relative;
-  padding: 2px;
+  grid-row-start: auto;
   counter-increment: item-counter;
 }
 .item::after {

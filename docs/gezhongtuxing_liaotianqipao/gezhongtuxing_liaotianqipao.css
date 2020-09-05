@@ -1,0 +1,29 @@
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-size: 16px;
+  font-family: Helvetica;
+}
+.chat-pop_wrapper {
+  position: relative;
+  width: 10rem;
+  margin: 1rem;
+  padding: 1rem;
+  text-align: stretch;
+  background-color: #e0e0e0;
+  border-radius: 1rem;
+}
+.chat-pop_wrapper::after {
+  position: absolute;
+  /* 绝对定位并且设定相对父元素的高度偏移量，保证气泡位于中间位置；将伪类添加的正方形旋转 45 度角显示小尖。 */
+  top: 50%;
+  right: -0.5rem;
+  width: 1rem;
+  height: 1rem;
+  background-color: #e0e0e0;
+  transform: translateY(-50%) rotate(45deg);
+  overflow: hidden;
+  content: '';
+}
+
