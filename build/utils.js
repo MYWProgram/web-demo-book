@@ -2,8 +2,8 @@ const pinyin = require('pinyin');
 const glob = require('glob');
 const path = require('path');
 const pinyinConfig = { style: pinyin.STYLE_NORMAL };
-// * 获取指定路径下的入口文件。
-function getEntries(globPath) {
+// ? 获取指定路径下的入口文件。
+const getEntries = globPath => {
   const files = glob.sync(globPath);
   const entries = {};
   files.forEach(function (filepath) {
@@ -12,17 +12,21 @@ function getEntries(globPath) {
     entries[name] = '../' + filepath;
   });
   return entries;
-}
-// * 根据路径生成文件名。
-function getName(path) {
-  const pathArr = path.split('src')[1].split('\\');
+};
+// ? 根据路径生成文件名。
+const getName = path => {
+  // ! 判断操作系统进行路径拼接，解决 Mac development 环境下不加载对应路径的 Bug.
+  const pathArr =
+    process.platform === 'darwin'
+      ? path.split('src')[1].split('/')
+      : path.split('src')[1].split('\\');
   let pathName =
     pinyin(pathArr[1], pinyinConfig).join('') + '_' + pinyin(pathArr[2], pinyinConfig).join('');
   pathName = pathName.replace(/ /g, '_');
   return pathName;
-}
-// * 获取每一页的配置信息。
-function getPageConfigs(entrieConfigs) {
+};
+// ? 获取每一页的配置信息。
+const getPageConfigs = entrieConfigs => {
   const pagesConfig = {};
   const entries = {};
   for (let key in entrieConfigs) {
@@ -46,7 +50,7 @@ function getPageConfigs(entrieConfigs) {
     }
   }
   return { pagesConfig, entries };
-}
+};
 
 module.exports = {
   getEntries,

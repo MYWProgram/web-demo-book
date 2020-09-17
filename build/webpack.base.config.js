@@ -1,21 +1,14 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
 let dotenv = require('dotenv');
 const path = require('path');
 const { getEntries, getName, getPageConfigs } = require('./utils');
-
-// * 获取所有的入口 configs。
+// * 获取所有的入口 config.
 const entrieConfigs = getEntries('src/*/config.json');
 const { pagesConfig, entries } = getPageConfigs(entrieConfigs);
 const themeEntries = { index: path.resolve(__dirname, '../template/main.js') };
-// for (let key in pagesConfig) {
-//   for (let page of pagesConfig[key].pages) {
-//     console.log(page)
-//     console.log(page.type, page.title, page.path)
-//   }
-// }
+// * 根据当前环境进行启动判断，加载对应环境文件资源。
 const mode = process.env.NODE_ENV || 'development';
 if (mode === 'development') {
   dotenv.config({ path: path.resolve(__dirname, '../.env.development') });
