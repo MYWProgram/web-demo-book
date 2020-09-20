@@ -1,44 +1,75 @@
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
 }
-.star-rating {
-  display: flex;
-  flex-direction: row-reverse;
+.center {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.star-rating input {
-  width: 35px;
-  height: 35px;
-  font-size: 35px;
-  line-height: 35px;
+.stars {
+  height: 150px;
   text-align: center;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+}
+.stars input {
+  display: none;
+}
+.stars label {
+  float: right;
+  margin: 0 5px;
+  font-size: 100px;
+  text-shadow: 1px 1px #bbb;
+  color: lightgrey;
   cursor: pointer;
-  transition: all 300ms;
 }
-.star-rating input:focus {
-  outline: none;
-}
-.star-rating input::after {
-  transition: all 300ms;
-  color: tomato;
-  content: '☆';
-}
-.star-rating input:hover {
-  transform: scale(1.2);
-}
-.star-rating input:checked::after,
-.star-rating input:checked ~ input::after,
-.star-rating input:hover::after,
-.star-rating input:hover ~ input::after {
-  color: #1890ff;
+.stars label::before {
   content: '★';
+}
+.stars input:checked ~ label {
+  color: gold;
+  text-shadow: 1px 1px #c60;
+}
+/* 当前星星 hover 时，当前及之前的所有星星都进行变色。 */
+.stars:not(:checked) > label:hover,
+.stars:not(:checked) > label:hover ~ label {
+  color: gold;
+}
+/* 当前星星 checked 时，当前及之前所有星星变色并且设置 text-shadow 区别于 hover 状态。 */
+.stars input:checked > label:hover,
+.stars input:checked > label:hover ~ label {
+  color: gold;
+  text-shadow: 1px 1px goldenrod;
+}
+.stars .result::before {
+  display: none;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  width: 100%;
+  font-size: 30px;
+  color: #333;
+  transform: translateX(-47%);
+  content: "";
+}
+.stars input:checked ~ .result::before {
+  display: block;
+}
+.stars #five:checked ~ .result::before {
+  content: "Perfect";
+}
+.stars #four:checked ~ .result::before {
+  content: "Like";
+}
+.stars #three:checked ~ .result::before {
+  content: "Normal";
+}
+.stars #two:checked ~ .result::before {
+  content: "Dislike";
+}
+.stars #one:checked ~ .result::before {
+  content: "Terrible";
 }
 

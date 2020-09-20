@@ -24,7 +24,7 @@ h1 {
   position: absolute;
   transition: opacity 0.5s ease;
   opacity: 0;
-  content: '';
+  content: "";
 }
 .multiple input:checked + label::after {
   width: 20px;
@@ -36,6 +36,7 @@ h1 {
   border: 2px solid #64bd63;
   border-top: none;
   border-right: none;
+  transition: all ease 0.4s;
   opacity: 1;
 }
 /* switch */
@@ -120,21 +121,27 @@ h1 {
   border-radius: 50%;
 }
 .single label::after {
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   position: absolute;
   top: 50%;
   left: 50%;
   margin: -7px 0 0 -7px;
-  border: 1px solid #333333;
   border-radius: 50%;
   transition: all 0.5s ease;
   z-index: 1;
   cursor: pointer;
   content: '';
 }
+.single input:checked + label {
+  border-color: #64bd63;
+  box-shadow: 0px 0px 5px 0px #64bd63;
+  transition: border ease 0.4s, box-shadow ease 0.4s;
+}
 .single input:checked + label::after {
-  background: #64bd63;
+  background-color: #64bd63;
+  border-color: #64bd63;
+  transition: border ease 0.4s, background-color ease 0.4s;
 }
 /* 移动端单选。 */
 .single-checkbox_wrapper {
@@ -168,5 +175,6 @@ h1 {
 .input:checked + .colors {
   color: #ffffff;
   background-color: #64bd63;
+  transition: all ease 0.4s;
 }
 

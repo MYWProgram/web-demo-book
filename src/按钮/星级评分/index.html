@@ -5,17 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>评分按钮</title>
   </head>
-  <!--
-    * 给 input 加上 after 伪类，使用 ~ 兄弟选择器配合 :checked 的 input 来显示选中之后的伪类样式；
-    * 使用线性图标和填充图标当作文字，用 color 分别控制边框色和背景色。
-    -->
   <body>
-    <div class="star-rating">
-      <input type="radio" name="rate" />
-      <input type="radio" name="rate" />
-      <input type="radio" name="rate" />
-      <input type="radio" name="rate" />
-      <input type="radio" name="rate" />
+    <div class="center">
+      <div class="stars">
+        <input type="radio" id="five" name="rate" value="5" />
+        <label for="five"></label>
+        <input type="radio" id="four" name="rate" value="4" />
+        <label for="four"></label>
+        <input type="radio" id="three" name="rate" value="3" />
+        <label for="three"></label>
+        <input type="radio" id="two" name="rate" value="2" />
+        <label for="two"></label>
+        <input type="radio" id="one" name="rate" value="1" />
+        <label for="one"></label>
+        <span class="result"></span>
+      </div>
     </div>
   </body>
 </html>
