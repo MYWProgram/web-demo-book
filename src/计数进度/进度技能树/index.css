@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+}
+html,
+body {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  background-color: #6665ee;
+}
+::selection {
+  color: #fff;
+  background-color: #6665ee;
+}
+.skill-bars {
+  width: 600px;
+  padding: 25px 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+.skill-bars .bar:not(:last-child) {
+  margin-bottom: 20px;
+}
+.skill-bars .bar .info {
+  margin-bottom: 5px;
+}
+.skill-bars .bar .info span {
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
+}
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+.skill-bars .bar .progress-line {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.8);
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+.bar .progress-line span {
+  position: absolute;
+  height: 100%;
+  background-color: #6665ee;
+  border-radius: 10px;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.bar .progress-line.html span {
+  width: 90%;
+}
+.bar .progress-line.css span {
+  width: 60%;
+}
+.bar .progress-line.jquery span {
+  width: 85%;
+}
+.bar .progress-line.python span {
+  width: 50%;
+}
+.bar .progress-line.mysql span {
+  width: 75%;
+}
+.progress-line span::before {
+  position: absolute;
+  top: -14px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  animation: showText2 0.5s 1.5s linear forwards;
+  opacity: 0;
+  content: '';
+}
+.progress-line span::after {
+  position: absolute;
+  top: -28px;
+  right: 0;
+  padding: 1px 8px;
+  font-size: 12px;
+  color: #fff;
+  background-color: #000;
+  border-radius: 3px;
+  animation: showText2 0.5s 1.5s linear forwards;
+  opacity: 0;
+}
+@keyframes showText2 {
+  100% {
+    opacity: 1;
+  }
+}
+.progress-line.html span::after {
+  content: '90%';
+}
+.progress-line.css span::after {
+  content: '60%';
+}
+.progress-line.jquery span::after {
+  content: '85%';
+}
+.progress-line.python span::after {
+  content: '50%';
+}
+.progress-line.mysql span::after {
+  content: '75%';
+}
