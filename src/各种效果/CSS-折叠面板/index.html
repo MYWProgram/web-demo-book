@@ -3,26 +3,93 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS 面板</title>
+    <title>CSS-折叠面板</title>
   </head>
-  <!--
-    * 1. 利用 checkbox 的多选特性，实现同时事件聚焦。
-    * 2. 利用 checkbox 的可聚焦性，模拟点击事件。
-    * 3. 通过 CSS 派生选择器来实现内容区域的高度变换从而实现折叠效果。
-    -->
   <body>
-    <div class="collapse-wrapper">
-      <input type="checkbox" id="checkbox-first" class="checkbox-common" />
-      <label for="checkbox-first" class="panel-title">面板一</label>
-      <section class="panel-content" id="content-first">面板一对应内容</section>
-      <input type="checkbox" id="checkbox-second" class="checkbox-common" />
-      <label for="checkbox-second" class="panel-title">面板二</label>
-      <section class="panel-content" id="content-second">
-        面板二对应内容
-      </section>
-      <input type="checkbox" id="checkbox-third" class="checkbox-common" />
-      <label for="checkbox-third" class="panel-title">面板三</label>
-      <section class="panel-content" id="content-third">面板三对应内容</section>
+    <div class="wrapper">
+      <!-- Title One -->
+      <div class="parent-tab">
+        <input type="radio" name="tab" id="tab-1" checked />
+        <label for="tab-1">
+          <span>Title One</span>
+          <div class="icon"><span></span></div>
+        </label>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing thelit. Quam, repellendus facere, id
+            porro magnam blanditiiss quoteos dolores ratione quidem ipsam esse quos pariatur,
+            repellat obcaecati!
+          </p>
+        </div>
+      </div>
+      <!-- Title Two -->
+      <div class="parent-tab">
+        <input type="radio" name="tab" id="tab-2" />
+        <label for="tab-2">
+          <span>Title Two</span>
+          <div class="icon"><span></span></div>
+        </label>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing thelit. Quam, repellendus facere, id
+            porro magnam blanditiiss quoteos dolores ratione quidem ipsam esse quos pariatur,
+            repellat obcaecati!
+          </p>
+        </div>
+      </div>
+      <!-- Title Three -->
+      <div class="parent-tab tab-3">
+        <input type="radio" name="tab" id="tab-3" />
+        <label for="tab-3" class="tab-3">
+          <span>Title Three</span>
+          <div class="icon"><span></span></div>
+        </label>
+        <div class="content">
+          <!-- Sub Heading One -->
+          <div class="child-tab">
+            <input type="checkbox" name="sub-tab" id="tab-4" />
+            <label for="tab-4">
+              <span>Sub Heading One</span>
+              <div class="icon"><span></span></div>
+            </label>
+            <div class="sub-content">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing thelit dolor. Utfacilis labore,
+                exercitationem fuga minima a illo modi vitaerse dignissimos? Vero?
+              </p>
+            </div>
+          </div>
+          <!-- Sub Heading Two -->
+          <div class="child-tab">
+            <input type="checkbox" name="sub-tab" id="tab-5" />
+            <label for="tab-5">
+              <span>Sub Heading Two</span>
+              <div class="icon"><span></span></div>
+            </label>
+            <div class="sub-content">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing thelit dolor. Utfacilis labore,
+                exercitationem fuga minima a illo modi vitaerse dignissimos? Vero?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Title Four -->
+      <div class="parent-tab">
+        <input type="radio" name="tab" id="tab-6" />
+        <label for="tab-6">
+          <span>Title Four</span>
+          <div class="icon"><span></span></div>
+        </label>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing thelit. Quam, repellendus facere, id
+            porro magnam blanditiiss quoteos dolores ratione quidem ipsam esse quos pariatur,
+            repellat obcaecati!
+          </p>
+        </div>
+      </div>
     </div>
   </body>
 </html>
