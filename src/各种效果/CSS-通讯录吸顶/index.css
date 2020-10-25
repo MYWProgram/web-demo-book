@@ -1,13 +1,8 @@
-:root {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  margin: 0;
 }
 div {
   width: 50vw;

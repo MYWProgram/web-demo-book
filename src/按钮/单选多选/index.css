@@ -26,6 +26,7 @@ h1 {
   opacity: 0;
   content: "";
 }
+/* "+" 选择器，选择某个元素（下面多选案例中被勾选的 checkbox）紧邻的一个兄弟元素（紧跟在其后的 label 标签）。 */
 .multiple input:checked + label::after {
   width: 20px;
   height: 10px;
