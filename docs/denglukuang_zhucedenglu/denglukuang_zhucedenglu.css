@@ -81,6 +81,7 @@ input[type='radio'] {
   color: #fff;
   cursor: default;
   -webkit-user-select: none;
+     -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
@@ -93,6 +94,7 @@ input[type='radio'] {
 #login:checked ~ label.login {
   cursor: default;
   -webkit-user-select: none;
+     -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }

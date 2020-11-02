@@ -5,14 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS 表单校验</title>
   </head>
-  <!--
-    * 使用 :valid 与 :invalid 伪元素，搭配正则表达式，可以判断 input、textarea 在正确输入或错误输入时的状态；
-    * required 属性与表单中的按钮有 :invalid 和空提示作用。
-    -->
   <body>
     <form class="form-validation">
       <div>
         <label for="name">姓名：</label>
+        <!-- * required 属性可以自动判断 :invalid 以及"空"。 -->
         <input
           id="name"
           type="text"

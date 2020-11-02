@@ -31,7 +31,7 @@ body {
   width: 100%;
   overflow: hidden;
 }
-/* 横向排列 form 并设置宽度装下所有的 form. */
+/* * 横向排列 form 并设置宽度装下所有的 form. */
 .container .form-outer form {
   display: flex;
   width: 400%;
@@ -104,6 +104,7 @@ form .page .btns button.next {
   display: flex;
   margin: 20px 0;
   -webkit-user-select: none;
+     -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }

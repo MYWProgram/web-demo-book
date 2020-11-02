@@ -57,6 +57,7 @@ h1 {
      -moz-appearance: none;
           appearance: none;
   -webkit-user-select: none;
+     -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
@@ -153,6 +154,7 @@ h1 {
   border-radius: 1em;
   background-color: silver;
   -webkit-user-select: none;
+     -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }

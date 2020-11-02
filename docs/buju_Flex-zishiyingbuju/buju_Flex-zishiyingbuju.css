@@ -1,10 +1,10 @@
 h1 {
   font-size: 24px;
 }
-/* 案例一对应 CSS 代码。 */
+/* * 案例一对应 CSS 代码，已知一行 div 个数的情况下，添加或者删除个数保持布局不变性。 */
 .container {
   display: flex;
-  /* 两端对齐 */
+  /* * 两端对齐。 */
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 10px;
@@ -26,15 +26,17 @@ h1 {
   background-color: red;
   content: '';
 }
-/* 如果最后一行是4个元素 */
+/* * :nth-child(n) 其中 n 可以是一个表达式或者固定的数字，用于选中一个父元素中的第几个子元素或某种子元素。 */
+/* * :last-child 选择某父元素中最后一个子元素。 */
+/* * 如果最后一行是 4 个元素。 */
 .list:last-child:nth-child(5n - 1) {
   margin-right: calc(19% + 5% / 4);
 }
-/* 如果最后一行是3个元素 */
+/* * 如果最后一行是 3 个元素。 */
 .list:last-child:nth-child(5n - 2) {
   margin-right: calc(38% + 10% / 4);
 }
-/* 如果最后一行是2个元素 */
+/* * 如果最后一行是 2 个元素。 */
 .list:last-child:nth-child(5n - 3) {
   margin-right: calc(57% + 15% / 4);
 }
@@ -55,47 +57,49 @@ h1 {
   background-color: gray;
   cursor: pointer;
 }
-/* 案例二对应 CSS 代码。 */
+/* * 案例二对应 CSS 代码，当一行的个数不确定时，使用添加占位元素的方法来解决，有几个 div 元素，就添加几个占位元素。 */
+.special-container {
+  padding: 0 10px 10px 10px;
+}
 .item {
   width: 100px;
   height: 100px;
   background-color: skyblue;
-  margin: 0 10px 0 0;
+  margin: 10px 10px 0 0;
 }
 .container > i {
   width: 100px;
   margin-right: 10px;
 }
-/* 案例三对应 CSS 代码。 */
+/* * 案例三对应 CSS 代码，行个数确定的另一种解决方案，计算最后一个元素的位置，它的 margin 值就是"间隙 + 空缺的盒子个数"。 */
 .box-container {
   display: flex;
   flex-wrap: wrap;
-  padding: 10px;
-  margin-top: 10px;
+  padding: 0 10px 10px 10px;
   outline: 1px solid red;
 }
 .box {
   width: 24%;
   height: 100px;
   background-color: skyblue;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 .box:not(:nth-child(4n)) {
   margin-right: calc(4% / 3);
 }
-/* 案例四对应 CSS 代码。 */
+/* * 案例四对应 CSS 代码，不确定行个数且不能操作 html 解构的情况下，使用 grid 布局。 */
 .item-wrapper {
-  margin-top: 10px;
   display: grid;
-  justify-content: space-between;
   grid-template-columns: repeat(auto-fill, 100px);
   grid-gap: 10px;
+  justify-content: space-between;
+  padding: 0 10px 10px 10px;
   outline: 1px solid red;
 }
 .item-content {
   width: 100px;
   height: 100px;
+  margin-top: 10px;
   background-color: skyblue;
-  margin-top: 5px;
 }
 

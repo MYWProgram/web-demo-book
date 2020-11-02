@@ -12,8 +12,14 @@ const progressText = [...document.querySelectorAll('.step p')];
 const progressCheck = [...document.querySelectorAll('.step .check')];
 const bullet = [...document.querySelectorAll('.step .bullet')];
 let current = 1;
+// ? 验证 input 值是否通过。
+const validateInputValue = ele => {
+  return document.querySelector(ele).checkValidity();
+};
 // ? 下一步按钮。
 nextBtnFirst.addEventListener('click', () => {
+  // * 例子：验证必填项。
+  if (!(validateInputValue('#name') && validateInputValue('#age'))) return;
   // * form 向左移动 1 / 4.
   slidePage.style.marginLeft = '-25%';
   // * 给相应的 step 加上 active 类。

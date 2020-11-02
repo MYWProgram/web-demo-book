@@ -4,14 +4,17 @@ body {
   font-family: Helvetica;
 }
 .masonry {
+  /* * 控制元素的列数。 */
   -webkit-column-count: 4;
           column-count: 4;
+  /* * 控制元素列间距。 */
   -webkit-column-gap: 0;
           column-gap: 0;
 }
 .item {
   padding: 2px;
   position: relative;
+  /* * 用于将 CSS Counters 的值增加给定值，可以使用 counter-reset 重置计数器。 */
   counter-increment: item-counter;
 }
 .item img {
@@ -30,6 +33,7 @@ body {
   line-height: 24px;
   background-color: #000;
   color: #fff;
+  /* * 该函数返回一个字符串，通常与伪类配合使用。 */
   content: counter(item-counter);
 }
 

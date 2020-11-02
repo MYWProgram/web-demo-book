@@ -17,11 +17,11 @@
   height: 24px;
   margin-bottom: 20px;
   z-index: 1;
-  /* 下面两个属性是实现这个效果的关键。但是由于第二个属性的兼容性不好，所以还可以通过伪类来代替这个属性。 */
+  /* * 下面两个属性是实现这个效果的关键。但是由于第二个属性的兼容性不好，所以还可以通过伪类来代替这个属性。 */
   text-align: justify;
   /* text-align-last: justify; */
 }
-/* 这一段代码代替上面的 text-align-last: justify; 属性。 */
+/* * 这一段代码代替上面的 text-align-last: justify; 属性。 */
 .justify-step::after {
   position: relative;
   display: inline-block;

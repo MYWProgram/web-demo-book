@@ -5,11 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS 模态框</title>
   </head>
-  <!--
-    * 1. 通过 a 标签描点定位元素，href 和 id 一致来模拟点击；
-    * 2. 通过添加 :target 伪类选择器来定位模态框外层元素，控制实现显示/隐藏。
-  -->
   <body>
+    <!-- * 使用 a 标签 href 属性的"锚点定位"特征，与需要定位打开元素的 id 保持一致。 -->
     <a href="#dialog" class="dialog-button_open">点击弹出模态框</a>
     <div class="dialog-wrapper" id="dialog">
       <div class="dialog-content">

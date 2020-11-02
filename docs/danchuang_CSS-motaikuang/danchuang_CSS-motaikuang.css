@@ -14,9 +14,10 @@
   right: 0;
   bottom: 0;
   left: 0;
-  visibility: hidden;
   background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
 }
+/* * :target 伪类选择器来定位模态框外层元素，控制实现显示/隐藏。 */
 .dialog-wrapper:target {
   visibility: visible;
 }
@@ -31,9 +32,11 @@
 }
 .dialog-button_close {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 6px;
+  right: 12px;
+  font-size: 24px;
   text-decoration: none;
   color: #ffffff;
+  transform: scaleY(0.8);
 }
 

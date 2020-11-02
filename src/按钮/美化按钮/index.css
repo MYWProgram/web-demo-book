@@ -1,80 +1,84 @@
 body {
-  background: #2d2d34;
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #2d2d34;
 }
 .box {
-  width: 120px;
-  height: 50px;
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 50px;
   margin: 15px;
   color: #f27059;
   cursor: pointer;
   user-select: none;
 }
 .item {
-  z-index: 99;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   font-size: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
   transition: 0.4s all ease;
+  z-index: 99;
 }
-.one:before,
-.one:after {
+/* * 第一个按钮上下实线。 */
+.one::before,
+.one::after {
+  position: absolute;
   width: 100%;
   height: 2px;
-  position: absolute;
   background-color: #f27059;
   transition: 0.4s all ease;
   content: '';
 }
-.one:before {
+.one::before {
   top: 0;
 }
-.one:after {
+.one::after {
   bottom: 0;
 }
-.one .item:before,
-.one .item:after {
-  height: 100%;
-  width: 2px;
+/* * 第一个按钮的背景色，hover 之前 z-index 为 -1，不可见。 */
+.one .item::before,
+.one .item::after {
   position: absolute;
   top: 0;
-  z-index: -1;
+  width: 2px;
+  height: 100%;
   background-color: #f27059;
   transition: 0.4s all ease;
+  z-index: -1;
   content: '';
 }
-.one .item:before {
+.one .item::before {
   left: 0;
 }
-.one .item:after {
+.one .item::after {
   right: 0;
 }
-.one:hover:before,
-.one:hover:after {
+.one:hover::before,
+.one:hover::after {
   transition: 0.4s all ease;
 }
-.one:hover:before {
+/* * hover 之后修改 translateY 属性值进行上下偏移。 */
+.one:hover::before {
   transform: translateY(-10px);
 }
-.one:hover:after {
+.one:hover::after {
   transform: translateY(10px);
 }
 .one:hover,
 .two:hover {
   color: #ffffff;
 }
-.one:hover .item:before,
-.one:hover .item:after {
+/* * hover 后修改背景色宽度进行左右动画移动填充。 */
+.one:hover .item::before,
+.one:hover .item::after {
   width: 100%;
   transition: 0.4s all ease;
 }
@@ -83,17 +87,18 @@ body {
   box-sizing: border-box;
   border: 2px solid #f27059;
 }
-.two:before {
-  width: 0;
-  height: 100%;
+/* * 第二个按钮只需要添加一个伪类，hover 后进行背景色填充即可。 */
+.two::before {
   position: absolute;
   left: 0;
-  z-index: -1;
+  width: 0;
+  height: 100%;
   background-color: #f27059;
   transition: 0.4s all ease;
+  z-index: -1;
   content: '';
 }
-.two:hover:before {
+.two:hover::before {
   width: 100%;
   transition: 0.4s all ease;
 }
@@ -101,7 +106,8 @@ body {
 .two:active {
   color: #000000;
 }
-.dynamic-border {
+.three {
+  position: relative;
   width: 120px;
   height: 50px;
   margin: 15px;
@@ -110,19 +116,20 @@ body {
   line-height: 50px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  transition: all 300ms;
   color: #f27059;
+  /* * background-image 来描绘四个方向的边框线。 */
   background: linear-gradient(0, #f27059 2px, #f27059 2px) no-repeat left top/0 2px,
     linear-gradient(-90deg, #f27059 2px, #f27059 2px) no-repeat right top/2px 0,
     linear-gradient(-180deg, #f27059 2px, #f27059 2px) no-repeat right bottom/0 2px,
     linear-gradient(-270deg, #f27059 2px, #f27059 2px) no-repeat left bottom/2px 0;
+  transition: all 300ms;
   cursor: pointer;
   user-select: none;
 }
-.dynamic-border:hover {
+.three:hover {
   color: #ffffff;
   background-size: 100% 2px, 2px 100%, 100% 2px, 2px 100%;
 }
-.dynamic-border:active {
+.three:active {
   color: #000000;
 }

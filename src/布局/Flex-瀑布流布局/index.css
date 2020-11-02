@@ -5,6 +5,7 @@ body {
 }
 .masonry {
   display: flex;
+  /* * 控制 flexbox 内元素以"横向"方式来呈现，如果需要横向排列的瀑布流，修改 column 为 row. */
   flex-direction: column;
   flex-wrap: wrap;
   height: 960px;

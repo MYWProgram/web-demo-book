@@ -41,6 +41,7 @@ body {
   caret-color: #09f;
   transition: all 300ms;
 }
+/* * :valid 与 :invalid 伪元素，搭配 html 中的正则表达式，可以判断 input、textarea 在正确输入或错误输入时的样式。 */
 .form-validation input:valid,
 .form-validation textarea:valid {
   box-shadow: inset 5px 0 0 #3c9;
