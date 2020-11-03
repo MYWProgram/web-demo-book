@@ -1,4 +1,4 @@
-:root {
+body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,7 +24,8 @@
   overflow: hidden;
   line-height: 1;
   letter-spacing: 0.01em;
-  transform: scale3d(1, 1, 1);
+  /* * transform: scale3d(); 定义在 3D 空间缩放元素的大小。 */
+  transform: scale3d(1.1, 1.1, 1.1);
   color: #ffffff;
   background-image: linear-gradient(135deg, #2d1350, #3e5087, #3f8fc1, #20d3ff);
 }

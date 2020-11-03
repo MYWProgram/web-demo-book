@@ -12,9 +12,12 @@ body {
   height: 200px;
   border-radius: 50%;
   background-image: url('./avatar.jpg');
+  cursor: pointer;
 }
 .avatar:hover {
+  /* * transform: rotate(...turn) 控制元素旋转的圈数。 */
   transform: rotate(666turn);
   transition-duration: 59s;
+  /* * 利用贝塞尔曲线函数来进行加速旋转动画。 */
   transition-timing-function: cubic-bezier(0.34, 0, 0.84, 1);
 }

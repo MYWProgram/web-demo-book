@@ -23,7 +23,7 @@ body {
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 999;
 }
-/* :target 代表一个唯一的页面元素(目标元素)，其 id 与当前 URL 片段匹配。 */
+/* * :target 代表一个唯一的页面元素(目标元素)，其 id 与当前 URL 片段匹配。 */
 .img-box:target {
   display: grid;
   place-items: center;

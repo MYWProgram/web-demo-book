@@ -24,6 +24,7 @@ footer {
   background-color: #ffffff;
 }
 @supports (height: 100vh) {
+  /* * 通过给 body 设置一个对角线（to right top）的渐变背景，同时覆盖一个背景为蓝灰渐变的底层，由左上至右下连线分割，露出顶部的一条线用来显示进度。 */
   body {
     background-image: linear-gradient(to right top, #0089f2 50%, #dddddd 50%);
     background-size: 100% calc(100% - 100vh + 129px);

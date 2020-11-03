@@ -8,6 +8,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* * 在父元素中加上如下属性，背景色将会消失。 */
   /* background-clip: text; */
 }
 .wrapper > h1 {
@@ -17,12 +18,13 @@ body {
   background-color: #000000;
 }
 .wrapper > h1 > span {
-  -webkit-background-clip: text;
+  /* * 背景裁剪为文字的前景色，可以镂空显示文字。 */
   background-clip: text;
   color: transparent;
 }
 .bg {
   height: 100%;
   background-image: linear-gradient(25deg, #fb2c2f, #eb852b, #d2bd22, #a9ef0c);
-  /* background-attachment: fixed; */
+  /* * 决定背景图像在视口内固定还是随着滚动条滚动。 */
+  background-attachment: fixed;
 }

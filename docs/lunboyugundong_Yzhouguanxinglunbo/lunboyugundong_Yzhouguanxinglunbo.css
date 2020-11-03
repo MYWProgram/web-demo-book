@@ -13,6 +13,7 @@ body {
   height: 100%;
   overflow-y: scroll;
   scroll-behavior: smooth;
+  /* * scroll-snap-type: mandatory; 在外层容器设置这个属性值，当没有被滚动时，将静止在一个 snap 点，也就是说会自动选择一个完整的点进行停靠。 */
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
 }
@@ -25,6 +26,8 @@ section {
   justify-content: center;
   align-items: center;
   height: 100%;
+  /* * scroll-snap-align: start; 对外层子项目设置这个属性，滚动结束会停靠于子项目起点。 */
+  /* ! 记得 iOS 移动端配合上：-webkit-overflow-scrolling: touch. */
   scroll-snap-align: start;
 }
 section:first-child {

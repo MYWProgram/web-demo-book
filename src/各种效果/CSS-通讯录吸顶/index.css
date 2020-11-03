@@ -16,6 +16,7 @@ dl {
 dt {
   position: -webkit-sticky;
   position: sticky;
+  /* * position: sticky; 特性，在 dt 距离顶部大于这个距离时，dt 表现为 position: static; 当小于等于这个距离时，dt 表现为 position: fixed. */
   top: -1px;
   margin: 0;
   padding: 2px 0 0 12px;

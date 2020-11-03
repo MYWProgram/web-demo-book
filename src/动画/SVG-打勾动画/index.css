@@ -17,13 +17,15 @@ h2 {
 }
 input:checked ~ h2 {
   animation: title 0.6s ease-in-out;
-  /* 延迟执行动画。 */
+  /* * 延迟执行动画。 */
   animation-delay: 1.75s;
-  /* 动画执行完毕，保持这个状态。 */
+  /* * 动画执行完毕，保持这个状态。 */
   animation-fill-mode: forwards;
 }
 .circle {
+  /* * stroke-dasharray 可控制用来描边的点划线的图案范式。 */
   stroke-dasharray: 1194;
+  /* * stroke-dashoffset 属性指定了 dash 模式到路径开始的距离。 */
   stroke-dashoffset: 1194;
 }
 input:checked + svg .circle {

@@ -46,9 +46,11 @@ h2 {
   border: 1px solid #1ba39c;
 }
 .row input:focus + label {
+  /* * + 相邻选择器选中 focus 之后相邻的 input，使用 translateX 配合 calc() 来进行位置计算并且添加动画。 */
   transform: translateX(calc(-100% - 2.5rem));
   color: #2e3131;
 }
+/* * :placeholder-shown 选中显示了 placeholder 的 input、textarea 标签。 */
 input:not(:focus):not(:placeholder-shown) + label {
   color: rgba(0, 0, 0, 0);
 }
@@ -64,6 +66,7 @@ input:not(:focus):not(:placeholder-shown) + label {
   outline: none;
   background: none;
 }
+/* * :not(:placeholder-show) 判断提交按钮的显示。 */
 .row input[type='password']:not(:placeholder-shown) ~ button {
   display: inline-block;
 }

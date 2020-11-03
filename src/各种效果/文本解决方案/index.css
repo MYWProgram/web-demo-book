@@ -1,21 +1,28 @@
 h1 {
   font-size: 24px;
 }
+/* ! 优点：没有兼容问题；响应式截断；只有溢出才显示省略号；省略号位置恰当。缺点：只适用于处理单行文本。 */
 .single-line--text_wrapper {
   width: 50%;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; /* 文本溢出显示省略号。 */
+  /* * 文本溢出显示省略号关键属性。 */
+  text-overflow: ellipsis;
 }
+/* ! 优点：响应式截断；只有溢出才显示省略号；省略号位置恰当。缺点：兼容性一般，webkit 内核的浏览器才支持，因此多适用移动端。 */
 .multi-line--text_wrapper {
-  display: -webkit-box; /* 显示为弹性伸缩盒子模型。 */
-  -webkit-box-orient: vertical; /* 设置或检索伸缩盒对象的子元素的排列方式。 */
-  -webkit-line-clamp: 3; /* 限制块元素显示文本的行数。 */
+  /* * 显示为弹性伸缩盒子模型。 */
+  display: -webkit-box;
+  /* * 设置或检索伸缩盒对象的子元素的排列方式。 */
+  -webkit-box-orient: vertical;
+  /* * 限制块元素显示文本的行数。 */
+  -webkit-line-clamp: 3;
   width: 50%;
   margin: 10px 0;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+/* ! 优点：没有兼容问题；响应式截断。缺点：单纯截断文字不加省略号，较为生硬。 */
 .multi-line--text_wrapper__height {
   max-height: 40px;
   margin-top: 10px;

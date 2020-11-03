@@ -5,14 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Y 轴惯性轮播</title>
   </head>
-  <!--
-    * Y 轴惯性轮播（常用于移动端）
-    * 这种全屏轮播的效果，之前都是使用 JS 来实现的，得益于 CSS 的新属性，现在不需要依赖 JS，并且效果也不错；
-    * 这一些列属性作用就是：网页容器滚动停止的时候，自动平滑定位到指定元素的指定位置。
-    * scroll-snap-type: mandatory; 在外层容器设置这个属性值，当没有被滚动时，将静止在一个 snap 点，也就是说会自动选择一个完整的点进行停靠；
-    * scroll-snap-align: start; 对外层子项目设置这个属性，滚动结束会停靠于子项目起点；
-    * 记得 iOS 移动端配合上：-webkit-overflow-scrolling: touch。
-    -->
   <body>
     <div class="example-mobile-scroll_y">
       <div class="scroller">

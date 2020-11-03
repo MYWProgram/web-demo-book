@@ -1,4 +1,4 @@
-:root {
+body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,6 +34,8 @@
 @keyframes move {
   0%,
   100% {
+    /* * 使用 clip-path 配合动画，裁剪显示伪类添加的边框。 */
+    /* * clip-path: inset(top, right, bottom, left); 上、右、下、左定义矩形各方向向内裁剪的距离。 */
     -webkit-clip-path: inset(0 100px 0 0);
             clip-path: inset(0 100px 0 0);
   }

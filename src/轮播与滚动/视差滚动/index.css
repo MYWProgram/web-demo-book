@@ -24,5 +24,6 @@ ul {
   background-image: url('./575-1920x1080.jpg');
   background-position: center;
   background-repeat: no-repeat;
+  /* * background-attachment: fixed; 背景相对于视口固定；即使一个元素拥有滚动机制，背景也不会随着元素的内容滚动。 */
   background-attachment: fixed;
 }

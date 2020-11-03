@@ -22,6 +22,7 @@
   display: block;
   animation: loading 2s infinite step-start both;
   white-space: pre-wrap;
+  /* * 使内容换行，分别添加三种内容的点号，动画变换显示。 */
   content: '...\A..\A.\A';
 }
 @keyframes loading {

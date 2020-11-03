@@ -1,10 +1,11 @@
 * {
+  /* * 想要让滚动条进行平滑过渡，不仅可以使用 behavior: smooth 还可以使用 CSS html {scroll-behavior: smooth;} */
   scroll-behavior: smooth;
 }
 input[type='radio']:checked + div {
   display: block;
 }
-/* 案例一对应 CSS 代码。 */
+/* * 案例一对应 CSS 代码。 */
 .example-back-to_top {
   width: 100%;
   height: 9999px;
@@ -38,7 +39,7 @@ input[type='radio']:checked + div {
   top: 22%;
   right: 0;
 }
-/* 案例二对应 CSS 代码。 */
+/* * 案例二对应 CSS 代码。 */
 .example-ele_show {
   width: 100%;
   height: 9999px;
@@ -56,7 +57,7 @@ input[type='radio']:checked + div {
   top: 10%;
   right: 0;
 }
-/* 案例三对应 CSS 代码。 */
+/* * 案例三对应 CSS 代码。 */
 .example-go-to_bottom {
   width: 100%;
   height: 9999px;
@@ -68,7 +69,7 @@ input[type='radio']:checked + div {
   top: 10%;
   right: 0;
 }
-/* 案例四对应 CSS 代码。 */
+/* * 案例四对应 CSS 代码。 */
 .example-mobile {
   width: 100%;
   height: 9999px;
@@ -80,8 +81,11 @@ input[type='radio']:checked + div {
   height: 150px;
   margin: 0px auto;
   overflow: auto;
-  /* 注意这里的 -webkit- 前缀。 */
   -webkit-overflow-scrolling: touch;
+  /*
+    * iOS 设备在局部滚动中可能会出现不顺畅的现象，需要设置 CSS 属性：-webkit-overflow-scrolling: touch;
+    * 这时可能会出现连滚不能停止的现象，添加下面的属性即可以阻止。
+  */
   -ms-scroll-chaining: none;
       overscroll-behavior: contain;
 }

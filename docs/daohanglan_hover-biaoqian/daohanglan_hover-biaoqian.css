@@ -50,6 +50,7 @@ li {
   border-bottom-color: tomato;
   z-index: -1;
 }
+/* * 判断底部伪类动画的开始方向，左或右。 */
 .underline-navbar li:hover + li::before {
   left: 0;
 }

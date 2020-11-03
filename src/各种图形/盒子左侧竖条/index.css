@@ -21,11 +21,13 @@ h1 {
   font-size: 16px;
   font-family: Helvetica;
 }
-/* 方案一，border 实现。 */
+/* * 方案一，border 实现。 */
+/* ! 会在 div 右侧增加 5px 的区域，从而把盒子向右挤 5px ，这样就改变了盒子的实际宽度。 */
 .border {
   border-left: 5px solid deeppink;
 }
-/* 方案二，使用伪元素实现。 */
+/* * 方案二，使用伪元素实现。 */
+/* ! 这个方案，外阴影和内阴影都不会改变盒子的宽度，但是外阴影会在左侧多出 5px 的区域，盒子的位置不会因为挤压而改变。 */
 .pseudo-element::before {
   position: absolute;
   left: 0;
@@ -34,22 +36,23 @@ h1 {
   background-color: deeppink;
   content: '';
 }
-/* 方案三，box-shadow 实现；又分为外阴影和内阴影。 */
+/* * 方案三，box-shadow 实现；又分为外阴影和内阴影。 */
 .box-shadow {
   box-shadow: -5px 0px 0 0 deeppink;
 }
 .inset-box_shadow {
   box-shadow: inset 5px 0px 0 0 deeppink;
 }
-/* 方案四，drop-shadow 实现。 */
+/* * 方案四，drop-shadow 实现，和方案三类似，也会对盒子产生影响。 */
 .drop-shadow {
   filter: drop-shadow(-5px 0 0 deeppink);
 }
-/* 方案五：渐变实现。 */
+/* * 方案五：渐变实现。 */
 .linear-gradient {
   background-image: linear-gradient(90deg, deeppink 0px, deeppink 5px, transparent 5px);
 }
-/* 方案六，修改滚动条。 */
+/* * 方案六，修改滚动条。 */
+/* ! 盒子右侧会多出 5px 区域，并且挤压盒子向右移动 5px；这只是实现方式，不推荐实际使用。 */
 .scroll-bar {
   width: 205px;
   background: deeppink;

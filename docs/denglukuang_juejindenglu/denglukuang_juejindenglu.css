@@ -66,6 +66,7 @@ body {
   display: none;
   margin-bottom: -27px;
 }
+/* * :focus-within 表示一个元素或该元素的后代元素获得焦点，也就是说元素本身或者其后代元素匹配 :focus 伪类的情况。 */
 .accout:focus-within img,
 .password:focus-within img {
   display: inline-block;
@@ -74,4 +75,9 @@ body {
 .password:focus-within ~ img {
   display: none;
 }
+/* * 下面这段代码可以代替上面的代码，不能直接选中 input 时，可以使用 :focus-within 进行匹配；比如 elementui 中的 el-input. */
+/* .accout input:focus + img,
+.password input:focus + img {
+  display: inline-block;
+} */
 

@@ -7,8 +7,7 @@ body {
   margin: 0;
   padding: 0;
 }
-ul,
-li {
+ul, li {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -47,6 +46,7 @@ li {
   border-bottom-color: tomato;
   z-index: -1;
 }
+/* * 判断底部伪类动画的开始方向，左或右。 */
 .underline-navbar li:hover + li::before {
   left: 0;
 }

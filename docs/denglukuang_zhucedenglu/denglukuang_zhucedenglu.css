@@ -12,7 +12,7 @@ body {
   place-items: center;
   background-image: -webkit-linear-gradient(left, #a445b2, #fa4299);
 }
-/* 应用于文档中被用户高亮的部分。 */
+/* * 选中文档中被用户高亮的部分。 */
 ::selection {
   color: #fff;
   background-color: #fa4299;
@@ -163,9 +163,6 @@ form .field input:focus::-ms-input-placeholder {
 form .field input:focus::placeholder {
   color: #b3b3b3;
   transform: translateY(-150%);
-}
-.form-inner form .pass-link {
-  margin-top: 5px;
 }
 .form-inner form .signup-link {
   margin-top: 30px;

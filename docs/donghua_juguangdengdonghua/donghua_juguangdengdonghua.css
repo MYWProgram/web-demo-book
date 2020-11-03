@@ -28,9 +28,10 @@ h1::after {
   background-size: 100%;
   background-position: center center;
   -webkit-background-clip: text;
-  /* 文字镂空的两条重要属性：background-clip、color: transparent */
+  /* * 文字镂空的两条重要属性：background-clip、color: transparent */
   background-clip: text;
   color: transparent;
+  /* * 获取标签上的文字，保证伪类的内容和标签文本一致。 */
   content: attr(data-text);
 }
 h1::after {

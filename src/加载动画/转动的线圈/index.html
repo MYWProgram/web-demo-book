@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>转动的线圈</title>
   </head>
-  <!--
-    * 1. 首先定义一个 66 * 66 的视口；然后定义一个半径为 31px 的圆；对线圈使用线性填充，分成 3 段，实现渐变填充的线条效果；然后添加一个小的圆圈。
-    * 2. fill: transparent; 让大圆圈的内部填充色变为透明，只留下外边的描边。
-    *    stroke-dasharray: 170; 使用点或虚线进行描边，由于长度没有超过圆的周长并且数值比较大，就看不到第二条点线或虚线。但当这个值比较小时，线圈就变成几条虚线绘制。
-    *    stroke-dashoffset: 20; 表示偏移绘制起点的距离，这个值越大，线条就越短。
-    -->
   <body>
     <div class="loading-item">
       <svg class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">

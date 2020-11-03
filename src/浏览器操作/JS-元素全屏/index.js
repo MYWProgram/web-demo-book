@@ -1,6 +1,7 @@
 import './index.css';
 
 const launchFullscreen = element => {
+  // * 使用 requestFullscreen API 和 exitFullscreen API 来控制全屏显示与退出。
   if (element.requestFullscreen) {
     element.requestFullscreen();
   } else if (element.mozRequestFullScreen) {
@@ -28,6 +29,7 @@ document.querySelector('#fullScreen').addEventListener('click', () => {
 document.querySelector('#exitFullScreen').addEventListener('click', () => {
   exitFullscreen();
 });
+// ? fullscreenchange、fullscreenerror 事件用来监听全屏触发与异常。
 document.addEventListener('fullscreenchange', () => {
   console.info('成功进入全屏。');
 });
