@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>加载动画</title>
+  </head>
+  <body>
+    <!-- * 案例一：彩虹旋转。 -->
+    <div class="rainbow-box">
+      <div class="rainbow-arc">
+        <div class="rainbow-arc_main"></div>
+      </div>
+      <div class="rainbow-arc">
+        <div class="rainbow-arc_main"></div>
+      </div>
+      <div class="rainbow-arc">
+        <div class="rainbow-arc_main"></div>
+      </div>
+      <div class="rainbow-arc">
+        <div class="rainbow-arc_main"></div>
+      </div>
+      <div class="rainbow-arc">
+        <div class="rainbow-arc_main"></div>
+      </div>
+    </div>
+    <!-- * 案例二：动态省略号。 -->
+    <div class="load-indicator">加载中<dot></dot></div>
+    <!-- * 案例三：小球聚合。 -->
+    <ul class="chaos-loading">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <!-- * 案例四：转动边框。 -->
+    <div class="snakelike-border"></div>
+    <!-- * 案例五：转动线圈。 -->
+    <div class="loading-item">
+      <svg class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+        <circle class="path spinner-border" cx="33" cy="33" r="31" stroke="url(#gradient)"></circle>
+        <linearGradient id="gradient">
+          <stop offset="50%" stop-color="tomato" stop-opacity="1"></stop>
+          <stop offset="65%" stop-color="tomato" stop-opacity="0.5"></stop>
+          <stop offset="100%" stop-color="tomato" stop-opacity="0"></stop>
+        </linearGradient>
+        <circle class="path spinner-dot" cx="37" cy="3" r="2"></circle>
+      </svg>
+    </div>
+  </body>
+</html>
