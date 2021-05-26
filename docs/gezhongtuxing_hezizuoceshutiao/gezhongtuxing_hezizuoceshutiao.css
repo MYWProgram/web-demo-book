@@ -45,8 +45,7 @@ h1 {
 }
 /* * 方案四，drop-shadow 实现，和方案三类似，也会对盒子产生影响。 */
 .drop-shadow {
-  -webkit-filter: drop-shadow(-5px 0 0 deeppink);
-          filter: drop-shadow(-5px 0 0 deeppink);
+  filter: drop-shadow(-5px 0 0 deeppink);
 }
 /* * 方案五：渐变实现。 */
 .linear-gradient {

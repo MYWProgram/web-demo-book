@@ -5,11 +5,9 @@ body {
 }
 .masonry {
   /* * 控制元素的列数。 */
-  -webkit-column-count: 4;
-          column-count: 4;
+  column-count: 4;
   /* * 控制元素列间距。 */
-  -webkit-column-gap: 0;
-          column-gap: 0;
+  column-gap: 0;
 }
 .item {
   padding: 2px;

@@ -81,7 +81,6 @@ input[type='radio'] {
   color: #fff;
   cursor: default;
   -webkit-user-select: none;
-     -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
@@ -94,7 +93,6 @@ input[type='radio'] {
 #login:checked ~ label.login {
   cursor: default;
   -webkit-user-select: none;
-     -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
@@ -129,17 +127,7 @@ input[type='radio'] {
 .form-inner form .field input:focus {
   border-color: #fc83bb;
 }
-.form-inner form .field input::-webkit-input-placeholder {
-  color: #999;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
 .form-inner form .field input:-ms-input-placeholder {
-  color: #999;
-  -ms-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-.form-inner form .field input::-ms-input-placeholder {
   color: #999;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -148,15 +136,7 @@ input[type='radio'] {
   color: #999;
   transition: all 0.3s ease;
 }
-form .field input:focus::-webkit-input-placeholder {
-  color: #b3b3b3;
-  transform: translateY(-150%);
-}
 form .field input:focus:-ms-input-placeholder {
-  color: #b3b3b3;
-  transform: translateY(-150%);
-}
-form .field input:focus::-ms-input-placeholder {
   color: #b3b3b3;
   transform: translateY(-150%);
 }

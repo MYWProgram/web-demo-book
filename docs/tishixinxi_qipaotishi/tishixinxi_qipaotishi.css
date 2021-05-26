@@ -13,7 +13,6 @@ body {
   font-size: 20px;
   color: #3d3d3d;
   -webkit-user-select: none;
-     -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;

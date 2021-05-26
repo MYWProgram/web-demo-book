@@ -58,17 +58,7 @@ body {
   line-height: 30px;
   resize: none;
 }
-.form-validation input::-webkit-input-placeholder, .form-validation textarea::-webkit-input-placeholder {
-  font-size: 14px;
-  font-family: Helvetica;
-  color: tomato;
-}
 .form-validation input:-ms-input-placeholder, .form-validation textarea:-ms-input-placeholder {
-  font-size: 14px;
-  font-family: Helvetica;
-  color: tomato;
-}
-.form-validation input::-ms-input-placeholder, .form-validation textarea::-ms-input-placeholder {
   font-size: 14px;
   font-family: Helvetica;
   color: tomato;
@@ -95,7 +85,6 @@ body {
   background-color: #3c9;
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }

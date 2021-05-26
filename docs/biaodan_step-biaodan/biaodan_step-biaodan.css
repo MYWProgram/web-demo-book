@@ -104,7 +104,6 @@ form .page .btns button.next {
   display: flex;
   margin: 20px 0;
   -webkit-user-select: none;
-     -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }

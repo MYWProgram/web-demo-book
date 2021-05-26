@@ -82,8 +82,7 @@ label img {
   -o-object-fit: cover;
      object-fit: cover;
   /* 未展示的图片灰度设置。 */
-  -webkit-filter: grayscale(1);
-          filter: grayscale(1);
+  filter: grayscale(1);
   opacity: 0.9;
 }
 label img:hover,
@@ -91,8 +90,7 @@ label img:hover,
 #tab-2:checked ~ .sliders label:nth-child(2) img,
 #tab-3:checked ~ .sliders label:nth-child(3) img,
 #tab-4:checked ~ .sliders label:nth-child(4) img {
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
+  filter: grayscale(0);
   opacity: 1;
 }
 input {

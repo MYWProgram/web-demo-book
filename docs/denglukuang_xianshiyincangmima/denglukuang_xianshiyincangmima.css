@@ -26,13 +26,7 @@ body {
   border-radius: 5px;
   outline: none;
 }
-.wrapper input::-webkit-input-placeholder {
-  font-size: 16px;
-}
 .wrapper input:-ms-input-placeholder {
-  font-size: 16px;
-}
-.wrapper input::-ms-input-placeholder {
   font-size: 16px;
 }
 .wrapper input::placeholder {
@@ -47,7 +41,6 @@ body {
   color: #8e44ad;
   transform: translateY(-50%);
   -webkit-user-select: none;
-     -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
