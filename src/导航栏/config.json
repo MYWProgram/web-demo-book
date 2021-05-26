@@ -13,10 +13,6 @@
       "src": "./hover-标签"
     },
     {
-      "title": "下拉菜单",
-      "src": "./下拉菜单"
-    },
-    {
       "title": "focusWithin-侧边栏",
       "src": "./focusWithin-侧边栏"
     }
