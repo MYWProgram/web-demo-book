@@ -109,7 +109,7 @@ module.exports = {
         removeAttributeQuotes: false,
         collapseWhitespace: false
       },
-      title: 'DEMO-BOOK',
+      title: 'WEB-DEMO-BOOK',
       templateParameters: {
         pagesConfig: pagesConfig,
         publicPath: process.env.PUBLICPATH

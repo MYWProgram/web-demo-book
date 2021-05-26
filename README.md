@@ -1,12 +1,12 @@
-# demo-book
+# web-demo-book
 
-使用 webpack 构建方便编写 demo 的多页面脚手架，适合开发者编写 demo 页面，提供分类预览的功能。
+使用 webpack 构建方便编写 demo 的多页面脚手架，适合开发者编写 demo 页面，提供分类预览的功能
 
 ## 使用方法
 
-- 每一个 demo 必须有一个分类，只需要在 src 中创建分类目录；
-- 在分类目录中添加单个 demo 的目录，里面必须包含`index.js`、`index.html`；
-- 在分类目录中创建 `config.json`，里面包含当前分类中 demo 的配置信息，比如标题和路径。
+- 每一个 demo 必须有一个分类，只需要在 src 中创建分类目录
+- 在分类目录中添加单个 demo 的目录，里面必须包含`index.js`、`index.html`
+- 在分类目录中创建 `config.json`，里面包含当前分类中 demo 的配置信息，比如标题和路径
 
 ```bash
 // config.json 格式如下
@@ -28,7 +28,7 @@
 }
 ```
 
-- 打包的时候需要配置根目录下`.env.production`文件的`PUBLICPATH`为静态文件根路径。比如当前`demo-book`项目放在`https://MYWProgram.github.io/demo-book/`域名路径下，那么`PUBLICPATH`可以设置为`/demo-book/`或者`https://MYWProgram.github.io/demo-book/`。
+- 打包的时候需要配置根目录下`.env.production`文件的`PUBLICPATH`为静态文件根路径。比如当前`web-demo-book`项目放在`https://MYWProgram.github.io/web-demo-book/`域名路径下，那么`PUBLICPATH`可以设置为`/web-demo-book/`或者`https://MYWProgram.github.io/web-demo-book/`
 
 ### dependences version
 

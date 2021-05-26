@@ -4,7 +4,7 @@
   left: 50%;
   height: 50px;
   width: 100px;
-  background-image: url(/demo-book/anniu_aixindianzan/heart-spirit-26fd54.png);
+  background-image: url(/web-demo-book/anniu_aixindianzan/heart-spirit-26fd54.png);
   /* * 对雪碧图进行定位，默认显示开始帧也就是最左边的图片元素；点击之后动画显示到最右边的图片元素即可。 */
   background-position: left;
   background-repeat: no-repeat;

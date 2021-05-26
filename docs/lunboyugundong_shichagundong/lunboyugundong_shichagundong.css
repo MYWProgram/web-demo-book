@@ -21,7 +21,7 @@ ul {
 }
 .parallax-scrolling {
   height: 1000px;
-  background-image: url(/demo-book/lunboyugundong_shichagundong/575-1920x1080-e84360.jpg);
+  background-image: url(/web-demo-book/lunboyugundong_shichagundong/575-1920x1080-e84360.jpg);
   background-position: center;
   background-repeat: no-repeat;
   /* * background-attachment: fixed; 背景相对于视口固定；即使一个元素拥有滚动机制，背景也不会随着元素的内容滚动。 */

@@ -25,14 +25,14 @@ body {
 .wrapper .images .img-1 {
   width: 100%;
   height: 100%;
-  background-image: url(/demo-book/tupianxiaoguo_tupiansetiaofanzhuan/img-f3f71a.jpg);
+  background-image: url(/web-demo-book/tupianxiaoguo_tupiansetiaofanzhuan/img-f3f71a.jpg);
   background-repeat: no-repeat;
 }
 .wrapper .images .img-2 {
   position: absolute;
   width: 50%;
   height: 100%;
-  background-image: url(/demo-book/tupianxiaoguo_tupiansetiaofanzhuan/img-7d0789.png);
+  background-image: url(/web-demo-book/tupianxiaoguo_tupiansetiaofanzhuan/img-7d0789.png);
   background-repeat: no-repeat;
 }
 .wrapper .slider {
